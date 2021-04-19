@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-ihh@0v6f1+69*eh%t()bfq2nvur=m3d*zmpkiumdizbtryq9(l
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    ".ap-northeast-2.compute.amazonaws.com"
-    ".fapis.io"
+    ".ap-northeast-2.compute.amazonaws.com",
+    ".fapis.io",
 ]
 
 # Application definition
