@@ -40,4 +40,10 @@ def request_new(request, estimate_id):
     
     else:
         return render(request, 'landingpage/request_new.html', {'estimate_id' : estimate_id})
+
+# def detail(request, estimate_id):
+#     estimate = estimate.objects.get(id=estimate_id)
+#     request = 
+#     context = {'estimate': estimate, 'request': request}
+#     return render(request, 'pybo/question_detail.html', context)
     
