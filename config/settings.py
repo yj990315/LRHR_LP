@@ -29,7 +29,7 @@ ALLOWED_HOSTS = [
     ".ap-northeast-2.compute.amazonaws.com",
     ".fapis.io",
     "127.0.0.1",
-    "15.165.160.83",
+    "3.34.1.242",
 ]
 
 # Application definition
