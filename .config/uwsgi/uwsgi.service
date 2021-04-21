@@ -1,4 +1,4 @@
-Unit]
+[Unit]
 Description=uWSGI service
 After=syslog.target
 
