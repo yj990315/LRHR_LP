@@ -2,10 +2,10 @@
 DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.mysql',    
-        'NAME': 'django_insta',                  
-        'USER': 'root',                         
-        'PASSWORD': 'Yj106102!',                 
-        'HOST': 'localhost',                     
+        'NAME': 'djangoprojectdb',                  
+        'USER': 'admin',                         
+        'PASSWORD': 'Yj106102!',
+        'HOST': 'mysql-dbms.cl8kdou2cgwk.ap-northeast-2.rds.amazonaws.com',                    
         'PORT': '3306',                          
     }
 }
