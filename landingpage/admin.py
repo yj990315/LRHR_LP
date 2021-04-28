@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Estimate, Request, Photo
+from .models import Estimate, Photo
 
 class PhotoInline(admin.TabularInline):
     model = Photo
@@ -11,5 +11,4 @@ class EstimateAdmin(admin.ModelAdmin):
     search_fields = ['id']
 
 admin.site.register(Photo)
-admin.site.register(Request, RequestInline)
 admin.site.register(Estimate, EstimateAdmin)

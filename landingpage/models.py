@@ -14,28 +14,41 @@ class Estimate(models.Model):
         help_text='패피스에 고객님의 소중한 상품을 맡기시는 목적을 선택해주세요.',
     )
     TYPE = (
-        ('b', '가방'),
-        ('t', '바지'),
-        ('s', '신발'),
+        ('a', '가방/핸드백'),
+        ('b', '아우터'),
+        ('c', '상의'),
+        ('d', '하의'),
+        ('e', '신발'),
+        ('f', '지갑/벨트'),
+        ('g', '패션 잡화'),
+        ('h', '기타'),
     )
     type_of_product = models.CharField(
-        max_length=1,
-        choices=TYPE,
-        blank=True,
-        default='b',
+        max_length = 1,
+        choices = TYPE,
+        blank = True,
+        default = 'a',
         help_text='고객님의 상품의 종류를 선택해주세요',
     )
-    brand = models.CharField(
-        max_length = 100,
-        help_text = '고객님의 상품의 브랜드를 입력해주세요',
-    )
     create_date = models.DateTimeField(auto_now_add = True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
-
-class Request(models.Model):
-    estimate = models.ForeignKey('Estimate', on_delete = models.CASCADE)
-    content = models.TextField()
+    name = models.CharField(max_length = 10, default = '이름', help_text = '고객님의 이름을 입력해주세요.')
+    phone_number = models.CharField(max_length = 11, default = '01000000000', help_text = '고객님의 전화 번호를 입력해주세요.')
+    address = models.TextField(default='배송을 받기 위한 고객님의 주소를 입력해주세요.', help_text = '고객님의 주소를 입력해주세요.')
+    age = models.IntegerField(default=20, help_text='고객님의 나이를 입력해주세요.')
+    GENDER = (
+        ('m', '남자'),
+        ('f', '여자'),
+    )
+    gender = models.CharField(
+        max_length = 1,
+        choices = GENDER,
+        blank = True,
+        default = 'm',
+        help_text='고객님의 성별을 선택해주세요',
+    )
+    request_content = models.TextField(max_length=1000, default='전달하실 요청사항을 자세히 입력해주세요.')
+    #author = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class Photo(models.Model):
-    request_target = models.ForeignKey('Request', on_delete = models.CASCADE)
+    estimate = models.ForeignKey('Estimate', null = True, on_delete = models.CASCADE)
     image = models.ImageField(upload_to='images/')
