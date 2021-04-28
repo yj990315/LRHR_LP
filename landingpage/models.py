@@ -31,10 +31,10 @@ class Estimate(models.Model):
         help_text='고객님의 상품의 종류를 선택해주세요',
     )
     create_date = models.DateTimeField(auto_now_add = True)
-    name = models.CharField(max_length = 10, default = '이름', help_text = '고객님의 이름을 입력해주세요.')
-    phone_number = models.CharField(max_length = 11, default = '01000000000', help_text = '고객님의 전화 번호를 입력해주세요.')
-    address = models.TextField(default='배송을 받기 위한 고객님의 주소를 입력해주세요.', help_text = '고객님의 주소를 입력해주세요.')
-    age = models.IntegerField(default=20, help_text='고객님의 나이를 입력해주세요.')
+    name = models.CharField(max_length = 10, help_text = '고객님의 이름을 입력해주세요.')
+    phone_number = models.CharField(max_length = 11, help_text = '고객님의 전화 번호를 입력해주세요.')
+    address = models.TextField(help_text = '고객님의 주소를 입력해주세요.')
+    age = models.IntegerField(default = 20, help_text='고객님의 나이를 입력해주세요.')
     GENDER = (
         ('m', '남자'),
         ('f', '여자'),
@@ -50,5 +50,5 @@ class Estimate(models.Model):
     #author = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class Photo(models.Model):
-    estimate = models.ForeignKey('Estimate', null = True, on_delete = models.CASCADE)
+    estimate = models.ForeignKey('Estimate', on_delete = models.CASCADE)
     image = models.ImageField(upload_to='images/')
