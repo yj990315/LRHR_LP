@@ -1,5 +1,35 @@
 {% extends 'base.html' %}
 {% block content %}
-안녕하세요 패피스에 오신 것을 환영합니다. <br>
-<a href="{% url 'landingpage:basic_information' %}"><span class="glyphicon glyphicon-plus">새로운 견적 받기</span></a>
+<div class="snap-container">
+    <div class="snap-content">
+        <div class="fapisintro">
+            <b>견적</b>부터 <b>배송</b>까지,
+        </div>
+        <div class="fapisintro" style="margin-top : 21px"> 
+            집 안에서 만나는 <b>명품 수선소</b>
+        </div>
+        <div class="request_button">
+            <a href="{% url 'landingpage:basic_information' %}"><span class="request_button_content">견적 신청하기</span></a>
+        </div>
+
+        <div class="fixed_request_button">
+            <a href="{% url 'landingpage:basic_information' %}"></a><span class="fixed_request_button_content"> 견적 신청하기</span></a>
+        </div>
+    </div>
+    <div class="snap-content">
+        <div class="request_button1">
+            <a href="{% url 'landingpage:basic_information' %}"><span class="request_button_content">견적 신청하기</span></a>
+        </div>
+    </div>
+    <div class="snap-content">
+        <div class="request_button1">
+            <a href="{% url 'landingpage:basic_information' %}"><span class="request_button_content">견적 신청하기</span></a>
+        </div>
+    </div>
+    <div class="snap-content">
+        <div class="request_button1">
+            <a href="{% url 'landingpage:basic_information' %}"><span class="request_button_content">견적 신청하기</span></a>
+        </div>
+    </div>
+</div>
 {% endblock %}
