@@ -1,3 +1,9 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+    margin:0;
+}
+
 .fapislogo {
     width: 165px;
     height: 55px;
@@ -72,7 +78,7 @@ b {
     position: fixed;
     bottom:0;
     width:100%;
-    height:86px;
+    height:57px;
     padding-top: 29px;
     background-color: #4364f7;
     text-align: center;
@@ -95,15 +101,29 @@ b {
 
 .snap-container {
     scroll-snap-type: y mandatory;
-    scroll-padding-top:var(--nav-height);
-    overflow-y:auto;
-    height:100%;
+    overflow:scroll;
+    height:calc(100vh - 86px);
 }  
 
-.snap-content {
+.snap-container > div {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    height:calc(100% - var(--nav-height));
+}
+
+.keywords {
+    margin-top: 400px;
+    height: 800px;
+    flex-grow: 0;
+    font-family: GmarketSans;
+    font-size: 40px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.34;
+    letter-spacing: normal;
+    text-align: left;
+    color: #0052d4;
+  
 }
 
 @font-face {

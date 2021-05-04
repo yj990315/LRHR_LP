@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="snap-container">
-    <div class="snap-content">
+    <div>
+        <img src="static/img/rgb-v-2-1.png" 
+            srcset="static/img/rgb-v-2-1@2x.png 2x, static/img/rgb-v-2-1@3x.png 3x"
+            class="fapislogo">
         <div class="fapisintro">
             <b>견적</b>부터 <b>배송</b>까지,
         </div>
@@ -11,25 +14,16 @@
         <div class="request_button">
             <a href="{% url 'landingpage:basic_information' %}"><span class="request_button_content">견적 신청하기</span></a>
         </div>
-
-        <div class="fixed_request_button">
-            <a href="{% url 'landingpage:basic_information' %}"></a><span class="fixed_request_button_content"> 견적 신청하기</span></a>
-        </div>
     </div>
-    <div class="snap-content">
-        <div class="request_button1">
-            <a href="{% url 'landingpage:basic_information' %}"><span class="request_button_content">견적 신청하기</span></a>
-        </div>
+    <div class="keywords">
+        패피스 이용 가이드 <br> <br> <br>
+        올리고 <br> <br> <br>
+        올리고 <br> <br> <br>
+        올리고 <br> <br> <br>
+        끝.
     </div>
-    <div class="snap-content">
-        <div class="request_button1">
-            <a href="{% url 'landingpage:basic_information' %}"><span class="request_button_content">견적 신청하기</span></a>
-        </div>
-    </div>
-    <div class="snap-content">
-        <div class="request_button1">
-            <a href="{% url 'landingpage:basic_information' %}"><span class="request_button_content">견적 신청하기</span></a>
-        </div>
-    </div>
+</div>
+<div class="fixed_request_button">
+    <a href="{% url 'landingpage:basic_information' %}"></a><span class="fixed_request_button_content"> 견적 신청하기</span></a>
 </div>
 {% endblock %}
