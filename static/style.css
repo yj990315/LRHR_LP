@@ -9,6 +9,7 @@ body {
     padding:0;
     overflow: hidden;
     font-family: GmarketSans;
+    background-image: linear-gradient(to top, #ffffff, #f8f9ff);
 }
 
 .fapislogo {
@@ -190,6 +191,65 @@ body {
     letter-spacing: normal;
     text-align: center;
     color: #000000;
+}
+
+.review-face {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    position: relative;
+    top: -10px;
+}
+
+.review-face-2 {
+    width: 108px;
+    height: 106px;
+    position: relative;
+    top: -10px;
+    object-fit: contain;
+}
+
+.review-nickname {
+    width: 111px;
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: -8px auto;
+    border-radius: 20px;
+    background-color: #0052d4;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.review-review {
+    width: 266px;
+    height: 58px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px -0.8px rgba(0, 82, 212, 0.2);
+    background-color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: center;
+    color: #0052d4;
 }
 
 
