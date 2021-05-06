@@ -79,8 +79,8 @@ body {
     position: fixed;
     bottom:0;
     width:100%;
-    height:57px;
-    padding-top: 29px;
+    height:42px;
+    padding-top: 16px;
     background-color: #4364f7;
     text-align: center;
 }
@@ -102,11 +102,11 @@ body {
 .snap-container {
     scroll-snap-type: y mandatory;
     overflow:scroll;
-    height:calc(100vh - 86px);
+    height:calc(100vh - 58px);
 }  
 
 .snap-container > div {
-    height:calc(100vh - 86px);
+    height:calc(100vh - 58px);
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
