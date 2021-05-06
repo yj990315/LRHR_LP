@@ -1,7 +1,14 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); 
+html {
+    font-size: 10px;
+}
+
 body {
     height: 100vh;
-    overflow: hidden;
     margin:0;
+    padding:0;
+    overflow: hidden;
+    font-family: GmarketSans;
 }
 
 .fapislogo {
@@ -14,8 +21,7 @@ body {
 
 .fapisintro {
     width: 317px;
-    font-family: GmarketSans;
-    font-size: 25px;
+    font-size: 2.5rem;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
@@ -24,11 +30,6 @@ body {
     color: #000000;
     margin-top: 29px;
     margin-left: 21px;
-}
-
-b {
-    font-family: GmarketSans;
-    font-weight: 700;
 }
 
 .request_button {
@@ -63,8 +64,7 @@ b {
     width: 97px;
     height: 18px;
     flex-grow: 0;
-    font-family: GmarketSans;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -89,7 +89,6 @@ b {
     width: 146px;
     height: 28px;
     flex-grow: 0;
-    font-family: GmarketSans;
     font-size: 24px;
     font-weight: bold;
     font-stretch: normal;
@@ -106,16 +105,15 @@ b {
 }  
 
 .snap-container > div {
+    height:calc(100vh - 86px);
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
 
 .keywords {
-    margin-top: 400px;
-    height: 800px;
+    padding: 40px;
     flex-grow: 0;
-    font-family: GmarketSans;
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -123,8 +121,77 @@ b {
     letter-spacing: normal;
     text-align: left;
     color: #0052d4;
-  
 }
+
+.review-container {
+    padding: 3.5vh 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "NotoSansKR",sans-serif;
+}
+
+.review-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.34;
+    letter-spacing: normal;
+    text-align: center;
+    color: #0052d4;
+}
+
+.review-comment {
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.79);
+}
+
+.review-box {
+    margin: 0px auto;
+    width: 305px;
+    height: 272px;
+    margin-top: 3.08vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 21px -8px rgba(0, 0, 0, 0.27);
+    background-color: #ffffff;
+}
+
+.rb-second { 
+    margin-top: 3vh;
+}
+
+.review-name {
+    position: relative;
+    margin-top: 15px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.review-profile {
+    font-size: 14px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
 
 @font-face {
     font-family: GmarketSans;
