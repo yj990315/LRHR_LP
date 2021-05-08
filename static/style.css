@@ -112,17 +112,17 @@ a {
     color: #ffffff;
 }
 
-/* .snap-container {
-    scroll-snap-type: y mandatory;
+.snap-container {
+    /* scroll-snap-type: y mandatory; */
     overflow:scroll;
     height:calc(100vh - 58px);
 }  
 
 .snap-container > div {
     height:calc(100vh - 58px);
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-} */
+    /* scroll-snap-align: start;
+    scroll-snap-stop: always; */
+}
 
 .keywords {
     padding: 40px;
