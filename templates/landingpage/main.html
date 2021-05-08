@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
+<div id="full-screen">
 <div class="snap-container">
     <div>
         <img src="static/img/rgb-v-2-1.png" 
             srcset="static/img/rgb-v-2-1@2x.png 2x, static/img/rgb-v-2-1@3x.png 3x"
             class="fapislogo">
         <div class="fapisintro">
-            <b>견적</b>부터 <b>배송</b>까지,
+            <b style="color: #0052d4">견적</b>부터 <b style="color: #0052d4">배송</b>까지,
         </div>
-        <div class="fapisintro" style="margin-top : 21px"> 
-            집 안에서 만나는 <b>명품 수선소</b>
+        <div class="fapisintro" style="margin-top : 18px"> 
+            집 안에서 만나는 <b style="color: #0052d4">명품 수선소</b>
         </div>
         <div class="request_button">
             <a href="{% url 'landingpage:basic_information' %}"><span class="request_button_content">견적 신청하기</span></a>
@@ -45,7 +46,7 @@
                     가방이 완전 새 것처럼 돌아왔어요.
                 </div>
             </div>
-            <div class="review-box rb-second">
+            <!-- <div class="review-box rb-second">
                 <div class="review-name">
                     정** 고객님
                 </div>
@@ -64,12 +65,13 @@
                     패피스 통해서 새 신발이 되었어요.
                 </div>
                 
-            </div>
+            </div> -->
             
         </div>
     </div>
 </div>
-<div class="fixed_request_button">
+<div id="fixed_request_button">
     <a href="{% url 'landingpage:basic_information' %}"></a><span class="fixed_request_button_content"> 견적 신청하기</span></a>
+</div>
 </div>
 {% endblock %}

@@ -1,10 +1,13 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); 
 html {
     font-size: 10px;
+    width: 100%;
+    height: 100%;
 }
 
 body {
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     margin:0;
     padding:0;
     overflow: hidden;
@@ -12,11 +15,22 @@ body {
     background-image: linear-gradient(to top, #ffffff, #f8f9ff);
 }
 
+a {
+    text-decoration: none;
+}
+
+#fullscreen {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
 .fapislogo {
     width: 165px;
     height: 55px;
     margin-top: 42px;
-    margin-left: 20px;
+    margin-left: 22px;
     object-fit: contain;
 }
 
@@ -29,20 +43,19 @@ body {
     letter-spacing: normal;
     text-align: left;
     color: #000000;
-    margin-top: 29px;
-    margin-left: 21px;
+    margin-top: 28px;
+    margin-left: 20px;
 }
 
 .request_button {
-    width: 157px;
+    width: 150px;
     height: 48px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin: 25px 213px 0 20px;
-    padding: 5px 20px;
+    margin: 24px 212px 0 20px;
     border-radius: 20px;
     background-color: #1c74ff;
 }
@@ -75,7 +88,7 @@ body {
     color: #ffffff;
 }
 
-.fixed_request_button {
+#fixed_request_button {
     position: fixed;
     bottom:0;
     width:100%;
@@ -125,7 +138,7 @@ body {
 }
 
 .review-container {
-    padding: 3.5vh 0px;
+    padding: 3.4vh 0px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -142,6 +155,7 @@ body {
     letter-spacing: normal;
     text-align: center;
     color: #0052d4;
+    margin-top: 22vh;
 }
 
 .review-comment {
@@ -157,11 +171,11 @@ body {
 
 .review-box {
     margin: 0px auto;
-    width: 305px;
-    height: 272px;
-    margin-top: 3.08vh;
+    width: 288px;
+    height: 260px;
+    margin-top: calc(20vh - 136px);
     border-radius: 10px;
-    box-shadow: 0 4px 21px -8px rgba(0, 0, 0, 0.27);
+    box-shadow: 0 4px 21px -8px rgb(0 0 0 / 27%);
     background-color: #ffffff;
 }
 
@@ -238,9 +252,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin: 20px auto;
+    margin: 15px auto;
     border-radius: 5px;
-    box-shadow: 0 2px 8px -0.8px rgba(0, 82, 212, 0.2);
     background-color: #ffffff;
     font-size: 13px;
     font-weight: 500;
@@ -249,7 +262,7 @@ body {
     line-height: 1.6;
     letter-spacing: normal;
     text-align: center;
-    color: #0052d4;
+    color: #797979;
 }
 
 
