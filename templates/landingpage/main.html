@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div id="full-screen">
-<div class="snap-container">
+<div class="snap-container" onload="setTimeout(function() {window.scrollTo(0, 1)}, 100)">
     <div>
         <!-- <img src="static/img/rgb-v-2-1.png" 
             srcset="static/img/rgb-v-2-1@2x.png 2x, static/img/rgb-v-2-1@3x.png 3x"
