@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
+<script>
+    window.addEventListener("load", function(){ if(!window.pageYOffset){ hideAddressBar(); } } );
+    window.addEventListener("orientationchange", hideAddressBar );
+</script>
 <div id="full-screen">
 <div class="snap-container" onload="setTimeout(function() {window.scrollTo(0, 1)}, 100)">
     <div>
