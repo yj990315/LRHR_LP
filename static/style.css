@@ -9,7 +9,6 @@ body {
     width: 100%;
     height: 100%;
     margin:0;
-    padding:0;
     overflow: hidden;
     font-family: GmarketSans;
     background-image: linear-gradient(to top, #ffffff, #f8f9ff);
@@ -24,6 +23,7 @@ a {
     overflow: hidden;
     width: 100%;
     height: 100%;
+    z-index: 100;
 }
 
 .fapislogo {
@@ -113,7 +113,7 @@ a {
 }
 
 .snap-container {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     overflow:scroll;
     height:calc(100vh - 58px);
     width: 100%;
@@ -124,6 +124,11 @@ a {
     position: relative;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    box-sizing: border-box;
+}
+
+.review-div {
+    padding-top: calc(45vh - 220px);
 }
 
 .keywords {
@@ -221,8 +226,8 @@ a {
     height: 116px;
     object-fit: contain;
     position: absolute;
-    top: 62px;
-    left: 80px;
+    top: 52px;
+    left: 85px;
 }
 
 .review-nickname {

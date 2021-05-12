@@ -26,7 +26,7 @@
                 (디자인 미정)
             </div>
         </div>
-        <div style="padding-top: 15vh; height: calc(85vh - 58px);">
+        <div class="review-div">
             <div class="review-title">
                 실제 고객님 리뷰
             </div>
@@ -44,9 +44,9 @@
                             <div class="review-profile">
                                 29세 남양주 거주
                             </div>
-                            <img src="static/img/4-1.png"
-                            srcset="static/img/4-1@2x.png 2x,
-                                    static/img/4-1@3x.png 3x"
+                            <img src="static/img/frame-91.png"
+                            srcset="static/img/frame-91@2x.png 2x,
+                                    static/img/frame-91@3x.png 3x"
                             class="review-face">
                             <div class="review-nickname">
                                 핸드백 분쇄기
@@ -63,9 +63,9 @@
                             <div class="review-profile">
                                 22세 수지 거주
                             </div>
-                            <img src="static/img/3-3.png"
-                            srcset="static/img/3-3@2x.png 2x,
-                                    static/img/3-3@3x.png 3x"
+                            <img src="static/img/3-1.png"
+                            srcset="static/img/3-1@2x.png 2x,
+                                    static/img/3-1@3x.png 3x"
                             class="review-face">
                             <div class="review-nickname">
                                 강남역 10번 출구
@@ -82,9 +82,9 @@
                             <div class="review-profile">
                                 23세 연남 거주
                             </div>
-                            <img src="static/img/5-1.png"
-                            srcset="static/img/5-1@2x.png 2x,
-                                    static/img/5-1@3x.png 3x"
+                            <img src="static/img/5-2.png"
+                            srcset="static/img/5-2@2x.png 2x,
+                                    static/img/5-2@3x.png 3x"
                             class="review-face">
                             <div class="review-nickname">
                                 응애 나 아기새
@@ -94,11 +94,10 @@
                                 패피스에서 길이만 줄어서 감쪽같이 돌아왔어요.
                             </div>
                         </div>
-                        <div class="swiper-pagination"> </div>
-                        <!-- <div class="swiper-button-prev"> </div>
-                        <div class="swiper-button-next"> </div> -->
-                        <div class="swiper-scrollbar"> </div>
                     </div>
+                    <div class="swiper-pagination"> </div>
+                    <div class="swiper-button-prev"> </div>
+                    <div class="swiper-button-next"> </div>
                 </div>
             </div>
         </div>
@@ -112,7 +111,8 @@
         loop: false,
 
         pagination:{
-            el: '.swiper.pagination',
+            el: '.swiper-pagination',
+            clickable: true,
         },
 
         navigation: {
