@@ -30,22 +30,15 @@
     gtag('js', new Date());
     gtag('config', 'UA-195594557-1');
     </script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
 <!-- 중괄호% include "navbar.html" %중괄호 -->
-
 <!-- jQuery JS -->
 <script src="{% static 'jquery-3.6.0.min.js' %}"></script>
-<script src="{% static 'HideMobileAddressBar.js' %}"></script>
 {% block content %}
 {% endblock %}
-<script>
-    document.addEventListener("dbclick", () => {
-        document.documentElement.requestFullscreen().catch((e) => {
-            console.log(e);
-        });
-    });
-</script>
 </body>
+
 </html>

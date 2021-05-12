@@ -1,81 +1,128 @@
 {% extends 'base.html' %}
 {% block content %}
-<script>
-    window.addEventListener("load", function(){ if(!window.pageYOffset){ hideAddressBar(); } } );
-    window.addEventListener("orientationchange", hideAddressBar );
-</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
+
 <div id="full-screen">
-<div class="snap-container" onload="setTimeout(function() {window.scrollTo(0, 1)}, 100)">
-    <div>
-        <!-- <img src="static/img/rgb-v-2-1.png" 
-            srcset="static/img/rgb-v-2-1@2x.png 2x, static/img/rgb-v-2-1@3x.png 3x"
-            class="fapislogo"> -->
-        <div class="fapisintro">
-            <b style="color: #0052d4">견적</b>부터 <b style="color: #0052d4">배송</b>까지,
+    <div class="snap-container">
+        <div>
+            <img src="static/img/rgb-v-2-1.png" 
+                srcset="static/img/rgb-v-2-1@2x.png 2x, static/img/rgb-v-2-1@3x.png 3x"
+                class="fapislogo">
+            <div class="fapisintro">
+                <b style="color: #0052d4">견적</b>부터 <b style="color: #0052d4">배송</b>까지,
+            </div>
+            <div class="fapisintro" style="margin-top : 18px"> 
+                집 안에서 만나는 <b style="color: #0052d4">명품 수선소</b>
+            </div>
+            <div class="request_button">
+                <a href="{% url 'landingpage:basic_information' %}"><span class="request_button_content">견적 신청하기</span></a>
+            </div>
         </div>
-        <div class="fapisintro" style="margin-top : 18px"> 
-            집 안에서 만나는 <b style="color: #0052d4">명품 수선소</b>
+        <div>
+            <div class="keywords">
+                이용가이드 <br>
+                (디자인 미정)
+            </div>
         </div>
-        <div class="request_button">
-            <a href="{% url 'landingpage:basic_information' %}"><span class="request_button_content">견적 신청하기</span></a>
-        </div>
-    </div>
-    <div>
-        <div class="keywords">
-            이용가이드 <br>
-            (디자인 미정)
-        </div>
-    </div>
-    <div>
-        <div class="review-container">
+        <div style="padding-top: 20vh; height: calc(80vh - 58px);">
             <div class="review-title">
                 실제 고객님 리뷰
             </div>
-            <div class="review-box">
-                <div class="review-name">
-                    김** 고객님
-                </div>
-                <div class="review-profile">
-                    29세 남양주 거주
-                </div>
-                <!-- <img src="static/img/4-1.png"
-                srcset="static/img/4-1@2x.png 2x,
-                        static/img/4-1@3x.png 3x"
-                class="review-face"> -->
-                <div class="review-nickname">
-                    핸드백 분쇄기
-                </div>
-                <div class="review-review">
-                    동네 세탁소에서는 받아주지 않는 마르지엘라 <br>
-                    가방이 완전 새 것처럼 돌아왔어요.
+            <div class="review-comment">
+                패피스를 경험해보신 고객님들의 <br>
+                소중한 후기를 들어보세요.
+            </div>
+            <div class="review-page">
+                <div class="swiper-container" style="height: 100%">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide review-box">
+                            <div class="review-name">
+                                김** 고객님
+                            </div>
+                            <div class="review-profile">
+                                29세 남양주 거주
+                            </div>
+                            <img src="static/img/4-1.png"
+                            srcset="static/img/4-1@2x.png 2x,
+                                    static/img/4-1@3x.png 3x"
+                            class="review-face">
+                            <div class="review-nickname">
+                                핸드백 분쇄기
+                            </div>
+                            <div class="review-review">
+                                동네 세탁소에서는 받아주지 않는 마르지엘라 <br>
+                                가방이 완전 새 것처럼 돌아왔어요.
+                            </div>
+                        </div>
+                        <div class="swiper-slide review-box">
+                            <div class="review-name">
+                                정** 고객님
+                            </div>
+                            <div class="review-profile">
+                                22세 수지 거주
+                            </div>
+                            <img src="static/img/3-3.png"
+                            srcset="static/img/3-3@2x.png 2x,
+                                    static/img/3-3@3x.png 3x"
+                            class="review-face">
+                            <div class="review-nickname">
+                                강남역 10번 출구
+                            </div>
+                            <div class="review-review">
+                                새로 산 맥퀸에 친구가 술먹고 토를 했는데, <br>
+                                패피스 통해서 새 신발이 되었어요.
+                            </div>
+                        </div>
+                        <div class="swiper-slide review-box">
+                            <div class="review-name">
+                                박** 고객님
+                            </div>
+                            <div class="review-profile">
+                                23세 연남 거주
+                            </div>
+                            <img src="static/img/5-1.png"
+                            srcset="static/img/5-1@2x.png 2x,
+                                    static/img/5-1@3x.png 3x"
+                            class="review-face">
+                            <div class="review-nickname">
+                                응애 나 아기새
+                            </div>
+                            <div class="review-review">
+                                해외직구로 구매한 너무 긴 오프화이트 바지, <br> 
+                                패피스에서 길이만 줄어서 감쪽같이 돌아왔어요.
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"> </div>
+                        <!-- <div class="swiper-button-prev"> </div>
+                        <div class="swiper-button-next"> </div> -->
+                        <div class="swiper-scrollbar"> </div>
+                    </div>
                 </div>
             </div>
-            <!-- <div class="review-box rb-second">
-                <div class="review-name">
-                    정** 고객님
-                </div>
-                <div class="review-profile">
-                    22세 수지 거주
-                </div>
-                <img src="static/img/3-3.png"
-                srcset="static/img/3-3@2x.png 2x,
-                        static/img/3-3@3x.png 3x"
-                class="review-face-2">
-                <div class="review-nickname" style="width:131px; margin-top: -20px;">
-                    강남역 10번 출구
-                </div>
-                <div class="review-review" style="margin-top:20px;">
-                    새로 산 맥퀸에 친구가 술먹고 토를 했는데, <br>
-                    패피스 통해서 새 신발이 되었어요.
-                </div>
-                
-            </div> -->
-            
         </div>
     </div>
+    <div id="fixed_request_button">
+        <a href="{% url 'landingpage:basic_information' %}"></a><span class="fixed_request_button_content"> 견적 신청하기</span></a>
+    </div>
 </div>
-<div id="fixed_request_button">
-    <a href="{% url 'landingpage:basic_information' %}"></a><span class="fixed_request_button_content"> 견적 신청하기</span></a>
-</div>
-</div>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        loop: false,
+
+        pagination:{
+            el: '.swiper.pagination',
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    })
+</script>
 {% endblock %}
