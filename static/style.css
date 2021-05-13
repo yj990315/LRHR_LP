@@ -128,21 +128,50 @@ a {
     box-sizing: border-box;
 }
 
-.review-div {
-    padding-top: calc(42vh - 220px);
+.keyword-container {
+    background-color: #d3dff4;
+    width: 100%;
+    height: 54vh;
 }
 
-.keywords {
-    padding: 40px;
+.keyword-title {
+    margin-top: 64vh;
+    width: 100%;
+    height: 60px;
     flex-grow: 0;
-    font-size: 3rem;
+    font-family: GmarketSans;
+    font-size: 50px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.34;
     letter-spacing: normal;
-    text-align: left;
+    text-align: center;
     color: #0052d4;
+}
+
+.keyword-line {
+    margin-top: 2vh;
+    margin-left: calc(50vw - 55px);
+    width: 110px;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.keyword-comment {
+    margin-top: 2.8vh;
+    width: 100vw;
+    height: 54px;
+    font-family: "NotoSansKR",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.review-div {
+    padding-top: calc(42vh - 220px);
 }
 
 .review-page {
@@ -277,6 +306,46 @@ a {
     font-family: "NotoSansKR",sans-serif;
 }
 
+.swiper-button-prev {
+    background-image: url("./img/left-arrow@3x.png") !important;
+}
+
+.swiper-button-next {
+    background-image: url("./img/right-arrow@3x.png") !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+.review-arrow-left {
+    width: 26px !important;
+    height: 26px !important;
+    background-size: 27px 27px !important;
+    left: 16px !important;
+}
+
+.review-arrow-right {
+    width: 26px !important;
+    height: 26px !important;
+    background-size: 27px 27px !important;
+    right: 16px !important;
+}
+
+.keyword-arrow-left {
+    width: 36px !important;
+    height: 36px !important;
+    background-size: 36px 36px !important;
+    left: 20px !important;
+}
+
+.keyword-arrow-right {
+    width: 36px !important;
+    height: 36px !important;
+    background-size: 36px 36px !important;
+    right: 20px !important;
+}
 
 @font-face {
     font-family: GmarketSans;
