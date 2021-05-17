@@ -367,7 +367,7 @@ a {
 
 .suggestion-content {
     position: absolute;
-    bottom: 24px;
+    bottom: 500px;
     width: 100%;
     font-family: "NotoSansKR", sans-serif;
     font-size: 15px;
