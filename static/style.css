@@ -135,11 +135,11 @@ a {
 .keyword-container {
     background-color: #d3dff4;
     width: 100%;
-    height: 54vh;
+    height: 344px;
 }
 
 .keyword-title {
-    margin-top: 62vh;
+    margin-top: 395px;
     width: 100vw;
     height: 44px;
     flex-grow: 0;
@@ -175,7 +175,7 @@ a {
 }
 
 .review-div {
-    padding-top: 10vh;
+    padding-top: 64px;
 }
 
 .review-page {
@@ -217,7 +217,7 @@ a {
     border-radius: 10px;
     box-shadow: 0 4px 21px -8px rgb(0 0 0 / 27%);
     background-color: #ffffff;
-    margin-top: 5vh;
+    margin-top: 32px;
     margin-left: 13vw;
     margin-right: 13vw;
     width: 74vw !important;
@@ -354,7 +354,7 @@ a {
 
 .suggestion-title {
     position: absolute;
-    top: 66vh;
+    top: 420px;
     width: 100%;
     font-size: 2rem;
     font-weight: 700;
@@ -365,7 +365,7 @@ a {
 
 .suggestion-content {
     position: absolute;
-    bottom: 3.75vh;
+    bottom: 24px;
     width: 100%;
     font-family: "NotoSansKR", sans-serif;
     font-size: 15px;
