@@ -343,6 +343,7 @@ a {
     height: 36px !important;
     background-size: 36px 36px !important;
     left: 20px !important;
+    top: 210px !important;
 }
 
 .keyword-arrow-right {
@@ -350,6 +351,7 @@ a {
     height: 36px !important;
     background-size: 36px 36px !important;
     right: 20px !important;
+    top: 210px !important;
 }
 
 .suggestion-title {
