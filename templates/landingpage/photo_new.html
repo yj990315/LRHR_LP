@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="POST" action="{% url 'landingpage:photo_new' estimate_id%}" enctype="multipart/form-data">    {% csrf_token %}
+    <input type="file" name="imgs" multiple /> <br>
+    <input type="submit" value="작성하기" />
+</form>
+{% endblock %}

@@ -9,7 +9,6 @@ class Estimate(models.Model):
     purpose_of_estimate = models.CharField(
         max_length=1,
         choices=PURPOSE,
-        blank=True,
         default='a',
         help_text='패피스에 고객님의 소중한 상품을 맡기시는 목적을 선택해주세요.',
     )
@@ -26,7 +25,6 @@ class Estimate(models.Model):
     type_of_product = models.CharField(
         max_length = 1,
         choices = TYPE,
-        blank = True,
         default = 'a',
         help_text='고객님의 상품의 종류를 선택해주세요',
     )
@@ -42,11 +40,13 @@ class Estimate(models.Model):
     gender = models.CharField(
         max_length = 1,
         choices = GENDER,
-        blank = True,
         default = 'm',
         help_text='고객님의 성별을 선택해주세요',
     )
     request_content = models.TextField(max_length=1000, default='전달하실 요청사항을 자세히 입력해주세요.')
+    labels = {
+        'purpose_of_estimate': ' ',
+    }
     #author = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class Photo(models.Model):

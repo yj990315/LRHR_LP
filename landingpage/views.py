@@ -8,27 +8,15 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'landingpage/main.html')
 
-def basic_information_new(request):
+#@login_required(login_url='common:login')
+def purpose_new(request):
     if request.method == "POST":
         estimate = Estimate()
-        form = BasicInformationForm(request.POST, instance = estimate)
-        if form.is_valid():
-            form.save()
-            """estimate.author = request.user"""
-            return redirect('landingpage:purpose_new', estimate.id)
-    else:
-        basic_information_form = BasicInformationForm()
-    return render(request, 'landingpage/basic_information.html', {'basic_information_form' : basic_information_form})
-
-#@login_required(login_url='common:login')
-def purpose_new(request, estimate_id):
-    if request.method == "POST":
-        estimate = get_object_or_404(Estimate, pk=estimate_id)
         form = PurposeForm(request.POST or None, instance = estimate)
         if form.is_valid():
             form.save()
             """estimate.author = request.user"""
-            return redirect('landingpage:type_of_product_new', estimate_id)
+            return redirect('landingpage:type_of_product_new', estimate.id)
     else:
         purpose_form = PurposeForm()
     return render(request, 'landingpage/request_pages/purpose.html', {'purpose_form' : purpose_form})
@@ -40,31 +28,49 @@ def type_of_product_new(request, estimate_id):
         form = TypeOfProductForm(request.POST or None, instance = estimate)
         if form.is_valid():
             form.save()
-            return redirect('landingpage:request_new', estimate.id)
+            return redirect('landingpage:photo_new', estimate.id)
     else:
         type_of_product_form = TypeOfProductForm()
     return render(request, 'landingpage/request_pages/type_of_product.html', {'type_of_product_form' : type_of_product_form})
 
 # @login_required(login_url='common:login')
-def request_new(request, estimate_id):
+def photo_new(request, estimate_id):
     estimate = get_object_or_404(Estimate, pk=estimate_id)
     if request.method == "POST":
-        estimate.request_content = request.POST['content']
-        estimate.save()
         for img in request.FILES.getlist('imgs'):
             photo = Photo()
             photo.estimate = estimate
             photo.image = img
             photo.save()
-        return redirect('landingpage:add_information', estimate.id)
-    
+        return redirect('landingpage:request_content_new', estimate.id)
     else:
-        return render(request, 'landingpage/request_new.html', {'estimate_id' : estimate_id})
+        return render(request, 'landingpage/photo_new.html', {'estimate_id' : estimate_id})
+
+def request_content_new(request, estimate_id):
+    estimate = get_object_or_404(Estimate, pk=estimate_id)
+    if request.method == "POST":
+        estimate.request_content = request.POST['content']
+        estimate.save()
+        return redirect('landingpage:basic_information', estimate.id)
+    else:
+        return render(request, 'landingpage/request_content_new.html', {'estimate_id' : estimate_id})
+
+def basic_information_new(request, estimate_id):
+    estimate = get_object_or_404(Estimate, pk=estimate_id)
+    if request.method == "POST":
+        form = BasicInformationForm(request.POST, instance = estimate)
+        if form.is_valid():
+            form.save()
+            """estimate.author = request.user"""
+            return redirect('landingpage:add_information', estimate_id)
+    else:
+        basic_information_form = BasicInformationForm()
+    return render(request, 'landingpage/basic_information.html', {'basic_information_form' : basic_information_form})
 
 def add_information_new(request, estimate_id):
     estimate = get_object_or_404(Estimate, pk=estimate_id)
     if request.method == "POST":
-        form = TypeOfProductForm(request.POST or None, instance = estimate)
+        form = AddInformationForm(request.POST or None, instance = estimate)
         if form.is_valid():
             form.save()
             return render(request, 'landingpage/main.html')

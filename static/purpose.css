@@ -1,0 +1,48 @@
+.title {
+  width: 100vw;
+  height: 46px;
+  margin-top: 74px;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.34;
+  letter-spacing: normal;
+  text-align: center;
+  color: #0052d4;
+}
+label {
+    display: none;
+}
+select {
+    width: 296px;
+    height: 44px;
+    font-family: "NotoSansKR", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.34;
+    text-align: center;
+    color: #000000;
+    margin-left: calc(50vw - 148px);
+    margin-top: 158px;
+    -webkit-appearance: none; 
+    /* 네이티브 외형 감추기 */ 
+    -moz-appearance: none; 
+    appearance: none; 
+    background: url("./img/arrow-right-circle.svg") no-repeat 95% 50%;
+}
+.helptext {
+    display: none;
+}
+.cut-border {
+    width:204px;
+
+    position:absolute;
+
+    top:0px;
+
+    z-index:1;
+
+    clip:rect(3,200,18,3); 
+
+}
