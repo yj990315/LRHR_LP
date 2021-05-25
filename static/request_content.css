@@ -1,0 +1,74 @@
+textarea {
+    resize: none;
+    width: 294px;
+    height: 200px;
+    margin-top: 18px;
+    margin-left: calc(50vw - 147px);
+    border: none;
+    text-decoration: none;
+    font-family: "NotoSansKR", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.34;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+body {
+    overflow: scroll !important;
+}
+form {
+    overflow: scroll !important;
+}
+textarea::placeholder {
+  font-family: "NotoSansKR", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.34;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.51);
+}
+
+.alert-title {
+    height: 24px;
+    flex-grow: 0;
+    font-family: "NotoSansKR", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.34;
+    letter-spacing: normal;
+    color: #000000;
+    margin-top: 18px;
+    margin-left: calc(50vw - 147px);
+}
+
+.alert-content {
+    width: 332px;
+    height: 126px;
+    margin: 1px 0 38.5px 11px;
+    font-family: "NotoSansKR", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #585858;
+    margin-top: 11px;
+    margin-left: calc(50vw - 147px);
+}
+
+.alert-line {
+    width: 294px;
+    height: 0.5px;
+    margin: 38.5px 33px 2px 16px;
+    background-color: #7d7d7d;
+    margin-left: calc(50vw - 147px);
+}

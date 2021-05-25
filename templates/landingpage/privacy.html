@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{%static 'purpose.css'%}">
+<link rel="stylesheet" href="{%static 'privacy.css'%}">
+<div class="title">원 모어 띵.</div>
+<div class="privacy-content">
+    개인정보처리방침에 동의하십니까? <br>
+    동의하지 않으실 경우, 서비스 이용이 <br>
+    어려우실 수 있습니다.
+</div>
+<a href="{% url 'landingpage:privacy_pop' %}" class="privacy-button" >
+    확인하기
+</a>
+<div id="fixed-next-button" >
+    <div class="status-bar-bg">
+        <div class="status-bar" style="width: 100vw;"></div>
+    </div>
+    
+    <a href="{%url 'landingpage:result'%}" class="save btn btn-default" id="next-button" style="padding-top: 20px">
+        <span class="fixed_request_button_content"> 네, 동의합니다. </span>
+    </a>
+</div>
+
+
+{% endblock %}

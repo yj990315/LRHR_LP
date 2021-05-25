@@ -4,12 +4,15 @@
 <link rel="stylesheet" href="{%static 'purpose.css'%}">
 <div class="title">어떤 서비스를 원하시나요?</div>
 <form method="POST" class="post-form">{% csrf_token %}
-    <div class="cut-border">
         {{ purpose_form }}
-    </div>
-    <button type="submit" class="save btn btn-default" id="fixed_request_button" style="padding-top: 0px">
-        <span class="fixed_request_button_content"> 다음으로 </span>
-    </button>
+        <div id="fixed-next-button" >
+            <div class="status-bar-bg">
+                <div class="status-bar" style="width: 20vw;"></div>
+            </div>
+            <button type="submit" class="save btn btn-default" id="next-button" style="padding-top: 0px">
+                <span class="fixed_request_button_content"> 다음으로 </span>
+            </button>
+        </div>
 </form>
 
 {% endblock %}

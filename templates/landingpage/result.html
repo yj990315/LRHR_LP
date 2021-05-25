@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{%static 'purpose.css'%}">
+<link rel="stylesheet" href="{%static 'result.css'%}">
+<div class="title">
+    신청이 완료되었습니다!
+</div>
+<div class="result-bg">
+    <div class="result-face">
+    </div>
+</div>
+<div class="result-content">
+    본 런칭 시 카카오톡으로 알려드릴게요! 
+</div>
+<div id="fixed-next-button" >
+    <div class="status-bar-bg">
+        <div class="status-bar" style="width: 100vw;"></div>
+    </div>
+    <a href="{%url 'index'%}" class="save btn btn-default" id="next-button" style="padding-top: 20px">
+        <span class="fixed_request_button_content"> 진짜 완료! </span>
+    </a>
+</div>
+{% endblock %}

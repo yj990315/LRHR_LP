@@ -1,0 +1,49 @@
+input {
+    width: 296px;
+height: 44px;
+font-family: "NotoSansKR", sans-serif;
+font-size: 18px;
+font-weight: 500;
+line-height: 1.34;
+text-align: left;
+color: #000000;
+margin-left: calc(50vw - 148px);
+margin-top: 22px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+background: url(./img/keyboard-arrow-down.svg) no-repeat 100% 50%;
+background-size: 33px 33px;
+border: 0px;
+border-bottom: 1.5px solid black !important;
+text-indent: 10px;
+padding-right: 30px;
+}
+
+select {
+    margin-top: 22px;
+    text-align: left;
+}
+
+#id_name{
+    margin-top: 38px;
+    text-align: left;
+    padding-right: 30px;
+    background: url(./img/name.svg) no-repeat 100% 50%;
+}
+
+#id_gender {
+    background: url(./img/user.svg) no-repeat 100% 50%;
+}
+
+#id_age {
+    background: url(./img/info.svg) no-repeat 100% 50%;
+}
+
+#id_number {
+    background: url(./img/phone.svg) no-repeat 100% 50%;
+}
+
+#id_address {
+    background: url(./img/home.svg) no-repeat 100% 50%;
+}

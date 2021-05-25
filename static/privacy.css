@@ -1,0 +1,30 @@
+.privacy-content {
+    width: 286px;
+    height: 81px;
+    font-family: "NotoSansKR", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    margin-left: calc(50vw - 143px);
+    margin-top: 16px;
+}
+.privacy-button {
+  font-family: "NotoSansKR", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.34;
+    letter-spacing: normal;
+    color: #7d7d7d;
+    margin-left: calc(50vw - 143px);
+    margin-top: 22px;
+    position: absolute;
+    text-decoration: underline;
+    text-decoration-color: #7d7d7d;
+}

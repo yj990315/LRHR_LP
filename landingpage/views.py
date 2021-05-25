@@ -37,11 +37,12 @@ def type_of_product_new(request, estimate_id):
 def photo_new(request, estimate_id):
     estimate = get_object_or_404(Estimate, pk=estimate_id)
     if request.method == "POST":
+
         for img in request.FILES.getlist('imgs'):
-            photo = Photo()
-            photo.estimate = estimate
-            photo.image = img
-            photo.save()
+            detail_photo = DetailPhoto()
+            detail_photo.estimate = estimate
+            detail_photo.image = img
+            detail_photo.save()
         return redirect('landingpage:request_content_new', estimate.id)
     else:
         return render(request, 'landingpage/photo_new.html', {'estimate_id' : estimate_id})
@@ -62,10 +63,19 @@ def basic_information_new(request, estimate_id):
         if form.is_valid():
             form.save()
             """estimate.author = request.user"""
-            return redirect('landingpage:add_information', estimate_id)
+            return redirect('landingpage:privacy')
     else:
         basic_information_form = BasicInformationForm()
     return render(request, 'landingpage/basic_information.html', {'basic_information_form' : basic_information_form})
+
+def privacy(request):
+    return render(request, 'landingpage/privacy.html')
+
+def privacy_pop(request):
+    return render(request, 'landingpage/privacy_pop.html')
+
+def result(request):
+    return render(request, 'landingpage/result.html')
 
 def add_information_new(request, estimate_id):
     estimate = get_object_or_404(Estimate, pk=estimate_id)

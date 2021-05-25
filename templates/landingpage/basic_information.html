@@ -1,8 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>새로운 견적</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ basic_information_form.as_p }}
-        <button type="submit" class="save btn btn-default">다음으로</button>
-    </form>
+{% load static %}
+<link rel="stylesheet" href="{%static 'purpose.css'%}">
+<link rel="stylesheet" href="{%static 'information.css'%}">
+<div class="title">
+    진짜 다 왔어요!
+</div>
+<form method="POST" class="post-form">{% csrf_token %}
+    {{basic_information_form}}
+    <div id="fixed-next-button" >
+        <div class="status-bar-bg">
+            <div class="status-bar" style="width: 100vw;"></div>
+        </div>
+        <button type="submit" class="save btn btn-default" id="next-button" style="padding-top: 20px">
+            <span class="fixed_request_button_content"> 완료 </span>
+        </button>
+    </div>
+</form>
 {% endblock %}
