@@ -62,6 +62,7 @@ a {
     margin: 24px 212px 0 20px;
     border-radius: 20px;
     background-color: #1c74ff;
+    z-index: 5;
 }
 
 .request_button1 {
@@ -90,6 +91,34 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
+}
+
+.intro-bg {
+    background-image: url('./img/saly-19.png');
+    width: 100vw;
+    height: 459px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -120px;
+    margin-left: 13px;
+    z-index: -100;
+    position: relative;
+    overflow-x:hidden;
+}
+
+.chevron-up {
+    width: 43px;
+    height: 38px;
+    object-fit: contain;
+    border-radius: 30px;
+    /* background-color: #cefa05; */
+    background-image: url(./img/chevron-up.svg);
+    margin-top: -82px;
+    margin-left: calc(50vw - 21px);
+    z-index: 1000;
+    background-size: 43px 38px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #fixed_request_button {
@@ -122,6 +151,7 @@ a {
     overflow:scroll;
     height:calc(100vh - 70px);
     width: 100vw;
+    overflow-x: hidden;
 }  
 
 .snap-container > div {
@@ -356,7 +386,7 @@ a {
 
 .suggestion-title {
     position: absolute;
-    top: 420px;
+    top: 400px;
     width: 100%;
     font-size: 2rem;
     font-weight: 700;
@@ -367,7 +397,7 @@ a {
 
 .suggestion-content {
     position: absolute;
-    top: 500px;
+    top: 480px;
     width: 100%;
     font-family: "NotoSansKR", sans-serif;
     font-size: 15px;
@@ -380,6 +410,20 @@ a {
     color: rgba(0, 0, 0, 0.7);
 }
 
+.mad-face  {
+    width: 211px;
+    height: 211px;
+    margin: 32px 80px 166px 31px;
+    object-fit: contain;
+}
+
+.laundary {
+    width: 360px;
+    height: 282px;
+    margin-top: -300px;
+    margin-left: calc(50vw - 180px);
+    object-fit: contain;
+}
 .portfolio-profile-box {
     padding-top: 30px;
     margin-left: 10vw;
@@ -503,7 +547,26 @@ a {
     margin-left: calc(50vw - 4px);
 }
 
+.estimate-bg {
+    margin-top: 20px;
+    margin-left: calc(50vw - 278px);
+}
 
+.delivery-ui {
+    margin-left: calc(50vw - 119px);
+    width: 238px;
+    height: 368px;
+}
+.delivery-box {
+    margin-top: -220px;
+    width:100vw;
+}
+.rec-ui {
+    width: 249px;
+    height: 432px;
+    object-fit: contain;
+    margin-left: calc(50vw - 130px);
+}
 @font-face {
     font-family: GmarketSans;
     src:url(GmarketSansTTF/GmarketSansTTFLight.ttf);
