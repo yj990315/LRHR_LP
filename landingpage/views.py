@@ -36,13 +36,15 @@ def type_of_product_new(request, estimate_id):
 # @login_required(login_url='common:login')
 def photo_new(request, estimate_id):
     estimate = get_object_or_404(Estimate, pk=estimate_id)
-    if request.method == "POST":
-
-        for img in request.FILES.getlist('imgs'):
-            detail_photo = DetailPhoto()
-            detail_photo.estimate = estimate
-            detail_photo.image = img
-            detail_photo.save()
+    if request.method == 'POST':
+        if 'overall-img' in request.FILES:
+            estimate.overall_image = request.FILES['overall-img']
+            estimate.save()
+        for img in request.FILES.getlist('detail-img'):
+            photo = Photo()
+            photo.estimate = estimate
+            photo.detail_image = img
+            photo.save()
         return redirect('landingpage:request_content_new', estimate.id)
     else:
         return render(request, 'landingpage/photo_new.html', {'estimate_id' : estimate_id})

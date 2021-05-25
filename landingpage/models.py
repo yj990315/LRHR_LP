@@ -32,7 +32,6 @@ class Estimate(models.Model):
     name = models.CharField(max_length = 10, help_text = '고객님의 이름을 입력해주세요.')
     phone_number = models.CharField(max_length = 11, help_text = '고객님의 전화 번호를 입력해주세요.')
     address = models.TextField(help_text = '고객님의 주소를 입력해주세요.')
-    
     age = models.CharField(max_length = 3, help_text='고객님의 나이를 입력해주세요.')
     GENDER = (
         ('m', '남자'),

@@ -3,6 +3,7 @@
 {% load static %}
 <link rel="stylesheet" href="{%static 'purpose.css'%}">
 <link rel="stylesheet" href="{%static 'information.css'%}">
+<button onclick="history.back()" class="back-button"></button>
 <div class="title">
     진짜 다 왔어요!
 </div>
@@ -12,7 +13,7 @@
         <div class="status-bar-bg">
             <div class="status-bar" style="width: 100vw;"></div>
         </div>
-        <button type="submit" class="save btn btn-default" id="next-button" style="padding-top: 20px">
+        <button type="submit" class="save btn btn-default" id="next-button">
             <span class="fixed_request_button_content"> 완료 </span>
         </button>
     </div>

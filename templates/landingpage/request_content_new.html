@@ -3,8 +3,9 @@
 {% load static %}
 <link rel="stylesheet" href="{%static 'purpose.css'%}">
 <link rel="stylesheet" href="{%static 'request_content.css'%}">
+<button onclick="history.back()" class="back-button"> </button>
 <div class="title">
-    어떤 서비스를 원하시나요
+    어떤 서비스를 원하시나요?
 </div>
 <form method="POST" action="{% url 'landingpage:request_content_new' estimate_id%}">    {% csrf_token %}
     <textarea name="content" placeholder="자세한 요청사항을 입력해주세요."></textarea> <br>
