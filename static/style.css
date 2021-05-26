@@ -97,6 +97,7 @@ a {
     background-image: url('./img/saly-19.png');
     width: 100vw;
     height: 459px;
+    background-size: 459px 459px;
     background-repeat: no-repeat;
     background-position: center;
     margin-top: -120px;
@@ -113,8 +114,8 @@ a {
     border-radius: 30px;
     /* background-color: #cefa05; */
     background-image: url(./img/chevron-up.svg);
-    margin-top: -82px;
-    margin-left: calc(50vw - 21px);
+    margin-top: -40px;
+    margin-left: calc(50vw - 21.5px);
     z-index: 1000;
     background-size: 43px 38px;
     background-position: center;
@@ -550,6 +551,8 @@ a {
 .estimate-bg {
     margin-top: 20px;
     margin-left: calc(50vw - 278px);
+    width: 555.5px;
+    height: 382.8px;
 }
 
 .delivery-ui {

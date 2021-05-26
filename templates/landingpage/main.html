@@ -7,9 +7,11 @@
 <div id="full-screen">
     <div class="snap-container">
         <div>
-            <img src="static/img/rgb-v-2-1.png" 
-                srcset="static/img/rgb-v-2-1@2x.png 2x, static/img/rgb-v-2-1@3x.png 3x"
+            <a href="{%url 'index'%}">
+                <img src="static/img/rgb-v-2-1@3x.png" 
                 class="fapislogo">
+            </a>
+            
             <div class="fapisintro">
                 <b style="color: #0052d4">견적</b>부터 <b style="color: #0052d4">배송</b>까지,
             </div>
@@ -21,14 +23,13 @@
             </div>
             <div class="intro-bg">
             </div>
-            <div class="chevron-up">
-            </div>
+            
         </div>
         <div>
             <div class="swiper-container" style="height: 100%; width: 100%;">
                 <div class="swiper-wrapper" style="height: 344px;">
                     <div class="swiper-slide keyword-container">
-                        <img src="static/img/upload-ui.webp" style="position: absolute; bottom: 0; width: 223px; height: 331px; left: calc(50vw - 112px);">
+                        <img src="static/img/upload-ui.png" style="position: absolute; bottom: 0; width: 223px; height: 331px; left: calc(50vw - 112px);">
                         <div class="keyword-title">
                             올리고
                         </div>
@@ -41,7 +42,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide keyword-container">
-                        <img src="static/img/select-ui.webp" style="position: absolute; bottom: 0; width: 223px; height: 331px; left: calc(50vw - 112px);">
+                        <img src="static/img/select-ui.png" style="position: absolute; bottom: 0; width: 223px; height: 331px; left: calc(50vw - 112px);">
                         <div class="keyword-title">
                             고르고
                         </div>
@@ -54,7 +55,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide keyword-container">
-                        <img src="static/img/send-ui.webp" style="position: absolute; bottom: 0; width: 223px; height: 331px; left: calc(50vw - 112px);">
+                        <img src="static/img/send-ui.png" style="position: absolute; bottom: 0; width: 223px; height: 331px; left: calc(50vw - 112px);">
                         <div class="keyword-title">
                             보내고
                         </div>
@@ -245,6 +246,8 @@
         </div>
     </div>
     <a href="{% url 'landingpage:purpose_new' %}" id="fixed_request_button">
+        <div class="chevron-up">
+        </div>
         <span class="fixed_request_button_content"> 견적 신청하기</span>
     </a>
 </div>
