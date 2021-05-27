@@ -593,7 +593,8 @@ a {
 }
 .delivery-box {
     margin-top: -220px;
-    width:100vw;
+    width: 360px;
+    height: 258px;
 }
 .rec-ui {
     width: 249px;
