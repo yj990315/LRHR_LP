@@ -113,7 +113,7 @@ a {
 .chevron-up {
     width: 58px;
     height: 52px;
-    margin-top: -138px;
+    margin-top: calc(100vh - 776px);
     margin-left: 24.5px;
     z-index: 1000;
     font-size: 18px;
@@ -123,7 +123,7 @@ a {
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #d5ff17;
+    color: #4d4d4d;
 }
 
 .scroll-down {
@@ -207,24 +207,26 @@ a {
     margin-top: 272px;
     width: 100vw;
     height: 44px;
-    flex-grow: 0;
     font-family: GmarketSans;
-    font-size: 40px;
+    flex-grow: 0;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    font-size: 36px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.34;
     letter-spacing: normal;
     text-align: center;
-    color: #0052d4;
+    color: #015def;
 }
 
 .keyword-line {
     margin-top: 2.6vh;
-    margin-left: calc(50vw - 55px);
-    width: 110px;
+    margin-left: calc(50vw - 42px);
+    width: 84px;
     height: 3px;
-    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+    background-color: rgba(29, 29, 29, 0.8);
 }
 
 .keyword-comment {
@@ -236,7 +238,7 @@ a {
     font-weight: 500;
     line-height: 1.5;
     text-align: center;
-    color: rgba(0, 0, 0, 0.9);
+    color: rgba(0, 0, 0, 0.79);
 }
 
 .review-div {
@@ -421,7 +423,7 @@ a {
 
 .suggestion-title {
     position: absolute;
-    top: 400px;
+    top: 422px;
     width: 100%;
     font-size: 2rem;
     font-weight: 700;
@@ -432,7 +434,7 @@ a {
 
 .suggestion-content {
     position: absolute;
-    top: 480px;
+    top: 498px;
     width: 100%;
     font-family: "NotoSansKR", sans-serif;
     font-size: 15px;
@@ -445,20 +447,14 @@ a {
     color: rgba(0, 0, 0, 0.7);
 }
 
-.mad-face  {
-    width: 211px;
-    height: 211px;
-    margin: 32px 80px 166px 31px;
+.stock {
+    width: 489px;
+    height: 349px;
+    margin-left: calc(50vw - 244px);
+    margin-top: 46px;
     object-fit: contain;
 }
 
-.laundary {
-    width: 360px;
-    height: 282px;
-    margin-top: -300px;
-    margin-left: calc(50vw - 180px);
-    object-fit: contain;
-}
 .portfolio-profile-box {
     padding-top: 30px;
     margin-left: 10vw;
@@ -589,15 +585,11 @@ a {
     height: 382.8px;
 }
 
-.delivery-ui {
-    margin-left: calc(50vw - 119px);
-    width: 238px;
-    height: 368px;
-}
-.delivery-box {
-    margin-top: -220px;
+.package {
+    margin-left: calc(50vw - 180px);
+    margin-top: 29px;
     width: 360px;
-    height: 258px;
+    height: 364px;
 }
 .rec-ui {
     width: 249px;
