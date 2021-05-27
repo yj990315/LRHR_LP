@@ -94,32 +94,39 @@ a {
 }
 
 .intro-bg {
-    background-image: url('./img/saly-19.png');
-    width: 100vw;
+    background-image: url('./img/intro-bg.png');
+    width: 114vw;
     height: 459px;
-    background-size: 459px 459px;
+    background-size: 750px 750px;
+    margin-top: -84px;
+    margin-left: -14vw;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: -120px;
-    margin-left: 13px;
     z-index: -100;
     position: relative;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 .chevron-up {
-    width: 43px;
-    height: 38px;
-    object-fit: contain;
-    border-radius: 30px;
-    /* background-color: #cefa05; */
-    background-image: url(./img/chevron-up.png);
-    margin-top: -40px;
-    margin-left: calc(50vw - 21.5px);
+    width: 58px;
+    height: 52px;
+    margin-top: -138px;
+    margin-left: 24.5px;
     z-index: 1000;
-    background-size: 43px 38px;
-    background-position: center;
-    background-repeat: no-repeat;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #d5ff17;
+}
+
+.scroll-down {
+    width: 30px;
+    height: 30px;
+    margin-left: 14px;
 }
 
 #fixed_request_button {
@@ -169,8 +176,32 @@ a {
     height: 344px;
 }
 
+.keyword-box {
+    width: 135px;
+    height: 41px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 85px;
+    padding: 10px;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.25);
+    background-color: #2f55ff;
+    z-index: 2000;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
 .keyword-title {
-    margin-top: 395px;
+    margin-top: 272px;
     width: 100vw;
     height: 44px;
     flex-grow: 0;
