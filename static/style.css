@@ -52,7 +52,7 @@ a {
 }
 
 .request_button {
-    width: 150px;
+    width: 157px;
     height: 48px;
     display: flex;
     flex-direction: column;
@@ -63,6 +63,8 @@ a {
     border-radius: 20px;
     background-color: #1c74ff;
     z-index: 5;
+    box-shadow: 0 4px 8px 0 rgba(0, 82, 212, 0.19);
+    background-color: #4874f2;
 }
 
 .request_button1 {
@@ -77,6 +79,7 @@ a {
     padding: 5px 20px;
     border-radius: 20px;
     background-color: #1c74ff;
+    
 }
 
 .request_button_content {
