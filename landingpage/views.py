@@ -60,14 +60,13 @@ def request_content_new(request, estimate_id):
 
 def basic_information_new(request, estimate_id):
     estimate = get_object_or_404(Estimate, pk=estimate_id)
+    basic_information_form = BasicInformationForm()
     if request.method == "POST":
         form = BasicInformationForm(request.POST, instance = estimate)
         if form.is_valid():
             form.save()
             """estimate.author = request.user"""
             return redirect('landingpage:privacy')
-    else:
-        basic_information_form = BasicInformationForm()
     return render(request, 'landingpage/basic_information.html', {'basic_information_form' : basic_information_form})
 
 def privacy(request):

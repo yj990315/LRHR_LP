@@ -1,5 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MinLengthValidator, MaxLengthValidator
+phone_min_validator = MinLengthValidator(10, "- 없이 전화번호만 입력해주십시오")
+phone_max_validator = MaxLengthValidator(12, "- 없이 전화번호만 입력해주십시오")
+
 class Estimate(models.Model):
     PURPOSE = (
         ('a', '수선'),
@@ -30,7 +34,7 @@ class Estimate(models.Model):
     )
     create_date = models.DateTimeField(auto_now_add = True)
     name = models.CharField(max_length = 10, help_text = '고객님의 이름을 입력해주세요.')
-    phone_number = models.CharField(max_length = 11, help_text = '고객님의 전화 번호를 입력해주세요.')
+    phone_number = models.CharField(max_length = 11, help_text = '고객님의 전화 번호를 입력해주세요.', validators=[phone_min_validator, phone_max_validator])
     address = models.TextField(help_text = '고객님의 주소를 입력해주세요.')
     age = models.CharField(max_length = 3, help_text='고객님의 나이를 입력해주세요.')
     GENDER = (
