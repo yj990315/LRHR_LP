@@ -18,10 +18,11 @@
         <div class="status-bar" style="width: 100vw;"></div>
     </div>
     
-    <a href="{%url 'landingpage:result'%}" class="save btn btn-default" id="next-button" style="padding-top: 20px">
+    <a href="{%url 'landingpage:result'%}" class="save btn btn-default" id="next-button" style="padding-top: 20px" onclick="gtag('event', '사전접수 버튼 클릭', {
+        'event_category': '사전접수',
+        'event_label': '사전접수_사전접수 버튼 클릭'
+});">
         <span class="fixed_request_button_content"> 네, 동의합니다. </span>
     </a>
 </div>
-
-    
 {% endblock %}
