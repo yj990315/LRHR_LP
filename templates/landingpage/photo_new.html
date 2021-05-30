@@ -49,6 +49,7 @@
         }
     });
 });
+$(function(){ $("input[type='submit']").click(function(){ var $fileUpload = $("input[type='file']"); if (parseInt($fileUpload.get(0).files.length)>2){ alert("You can only upload a maximum of 2 files"); } }); });
 </script>
 <script type="text/javascript">
     $(document).ready(function (e){
@@ -119,37 +120,49 @@
       }
     });
   </script>
+<script>
+  $("#detail-image").on("change", function() {
+    if ($("#detail-image")[0].files.length > 2) {
+        alert("You can select only 2 images");
+    } else {
+        $("#detailImgForm").submit();
+    }
+});
+</script>
 
 <link rel="stylesheet" href="{%static 'photo.css'%}">
 <link rel="stylesheet" href="{%static 'purpose.css'%}">
 <button onclick="history.back()" class="back-button"></button>
 <div class="title">패피스에게 보여주세요!</div>
 <form method="POST" action="{% url 'landingpage:photo_new' estimate_id%}" enctype="multipart/form-data">    {% csrf_token %}
-    <div class="overall-img-title">
-        전체 샷 (1장)
+  <div class="overall-img-title">
+      전체 샷 (1장)
+  </div>
+  <div class="filebox bs3-primary preview-image">
+      <label for="input_file"></label> 
+      <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
+      
+      <input type="file" id="input_file" name="overall-img" class="upload-hidden" required />
+  </div>
+  </form>
+<form method="POST" action="{% url 'landingpage:photo_new' estimate_id%}" id="detailImgForm" enctype="multipart/form-data">    {% csrf_token %}
+  <div class="detail-img-title">
+      원하는 작업 부위 (최대 5장)
+  </div>
+  <div class="filebox2 bs3-primary preview-image2">
+      <label for="detail-img"> </label>
+      <input type="file" name="detail-img" id="detail-img" class="upload-hidden2" minlength="1" maxlength="5" required multiple>
+      <div id="preview"></div>
+  </div>
+  </table>
+  <div id="fixed-next-button">
+    <div class="status-bar-bg">
+        <div class="status-bar" style="width: 60vw;"></div>
     </div>
-    <div class="filebox bs3-primary preview-image">
-        <label for="input_file"></label> 
-        <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
-        
-        <input type="file" id="input_file" name="overall-img" class="upload-hidden">
-    </div>
-    <div class="detail-img-title">
-        원하는 작업 부위 (최대 5장)
-    </div>
-    <div class="filebox2 bs3-primary preview-image2">
-        <label for="detail-img"> </label>
-        <input type="file" name="detail-img" id="detail-img" class="upload-hidden2" multiple>
-        <div id="preview"></div>
-    </div>
-    </table>
-    <div id="fixed-next-button">
-      <div class="status-bar-bg">
-          <div class="status-bar" style="width: 60vw;"></div>
-      </div>
-      <button type="submit" class="save btn btn-default" id="next-button" style="padding-top: 0px">
-          <span class="fixed_request_button_content"> 다음으로 </span>
-      </button>
+    <button type="submit" class="save btn btn-default" id="next-button" style="padding-top: 0px">
+        <span class="fixed_request_button_content"> 다음으로 </span>
+    </button>
   </div>
 </form>
 {% endblock %}
+

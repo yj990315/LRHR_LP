@@ -1,8 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MinLengthValidator, MaxLengthValidator
-phone_min_validator = MinLengthValidator(10, "- 없이 전화번호만 입력해주십시오")
-phone_max_validator = MaxLengthValidator(12, "- 없이 전화번호만 입력해주십시오")
+phone_min_validator = MinLengthValidator(10, "- 없이 올바른 전화번호를 입력했는지 확인해주세요.")
+phone_max_validator = MaxLengthValidator(12, "- 없이 올바른 전화번호를 입력했는지 확인해주세요.")
 
 class Estimate(models.Model):
     PURPOSE = (

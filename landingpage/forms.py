@@ -32,6 +32,8 @@ class BasicInformationForm(forms.ModelForm):
             'phone_number': forms.NumberInput(attrs={'placeholder': '전화번호'}),
             'address': forms.TextInput(attrs={'placeholder':'주소'}),
         }
+        def __init__(self, *args, **kwargs):
+         self.fields['age'].error_messages = {'max_length': '올바른 나이를 입력했는지 확인해주세요.'}
 
 class AddInformationForm(forms.ModelForm):
 

@@ -591,12 +591,90 @@ a {
     width: 360px;
     height: 364px;
 }
+
 .rec-ui {
     width: 249px;
     height: 432px;
     object-fit: contain;
     margin-left: calc(50vw - 130px);
 }
+
+.benefits-title {
+    width: 100%;
+    position: absolute;
+    margin-top: 31px;
+    text-shadow: 0 2px 5px rgb(0 0 0 / 25%);
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #0052d4;
+}
+
+.benefits-line {
+  width: 288px;
+  height: 1px;
+  position: absolute;
+  margin-left: calc(50vw - 144px);
+  margin-top: 130.5px;
+  background-color: #8b8b8b;
+}
+
+.benefits-foryou {
+    width: 100%;
+    height: 18px;
+    position: absolute;
+    margin-top: 144px;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #737373;
+}
+
+.benefits-money {
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    margin-top: 187px;
+    margin-left: calc(50vw - 23.5px);
+    flex-grow: 0;
+    object-fit: contain;
+}
+
+.benefits-content {
+    width: 100%;
+    height: 40px;
+    flex-grow: 0;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    position: absolute;
+    margin-top: 244px;
+}
+
+.benefits-small-line {
+    position: absolute;
+    margin-top: 310px;
+    margin-left: calc(50vw - 45px);
+    width: 90px;
+    height: 1px;
+    flex-grow: 0;
+    background-color: #8b8b8b;
+}
+
 @font-face {
     font-family: GmarketSans;
     src:url(GmarketSansTTF/GmarketSansTTFLight.ttf);

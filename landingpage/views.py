@@ -10,28 +10,24 @@ def index(request):
 
 #@login_required(login_url='common:login')
 def purpose_new(request):
+    estimate = Estimate()
+    form = PurposeForm(request.POST or None, instance = estimate)
     if request.method == "POST":
-        estimate = Estimate()
-        form = PurposeForm(request.POST or None, instance = estimate)
         if form.is_valid():
             form.save()
             """estimate.author = request.user"""
             return redirect('landingpage:type_of_product_new', estimate.id)
-    else:
-        purpose_form = PurposeForm()
-    return render(request, 'landingpage/request_pages/purpose.html', {'purpose_form' : purpose_form})
+    return render(request, 'landingpage/request_pages/purpose.html', {'purpose_form' : form})
 
 #@login_required(login_url='common:login')
 def type_of_product_new(request, estimate_id):
     estimate = get_object_or_404(Estimate, pk=estimate_id)
+    form = TypeOfProductForm(request.POST or None, instance = estimate)
     if request.method == "POST":
-        form = TypeOfProductForm(request.POST or None, instance = estimate)
         if form.is_valid():
             form.save()
             return redirect('landingpage:photo_new', estimate.id)
-    else:
-        type_of_product_form = TypeOfProductForm()
-    return render(request, 'landingpage/request_pages/type_of_product.html', {'type_of_product_form' : type_of_product_form})
+    return render(request, 'landingpage/request_pages/type_of_product.html', {'type_of_product_form' : form})
 
 # @login_required(login_url='common:login')
 def photo_new(request, estimate_id):
@@ -60,14 +56,15 @@ def request_content_new(request, estimate_id):
 
 def basic_information_new(request, estimate_id):
     estimate = get_object_or_404(Estimate, pk=estimate_id)
-    basic_information_form = BasicInformationForm()
-    if request.method == "POST":
+    if request.method == "POST":    
         form = BasicInformationForm(request.POST, instance = estimate)
         if form.is_valid():
             form.save()
             """estimate.author = request.user"""
             return redirect('landingpage:privacy')
-    return render(request, 'landingpage/basic_information.html', {'basic_information_form' : basic_information_form})
+    else:
+        form = BasicInformationForm(instance=estimate)
+    return render(request, 'landingpage/basic_information.html', {'basic_information_form' : form})
 
 def privacy(request):
     return render(request, 'landingpage/privacy.html')
