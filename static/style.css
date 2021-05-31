@@ -168,6 +168,7 @@ a {
         scroll-snap-type:none;
         overflow:scroll;
         height:calc(100vh - 70px);
+        min-height: 400px;
         width: 100vw;
         overflow-x: hidden;
     }
@@ -184,7 +185,7 @@ a {
     scroll-snap-type: y mandatory;
     overflow:scroll;
     height:calc(100vh - 70px);
-    min-height: 500px;
+    min-height: 400px;
     width: 100vw;
     overflow-x: hidden;
 }  
