@@ -709,7 +709,8 @@ a {
         width: 58px;
         height: 52px;
         position: absolute;
-        bottom: 12px;
+        /* bottom: 12px; */
+        top: 505px;
         left: 24px;
         z-index: 1000;
         font-size: 18px;
