@@ -648,11 +648,11 @@ a {
 }
 
 .benefits-money {
-    width: 47px;
-    height: 47px;
+    width: 48px;
+    height: 48px;
     position: absolute;
     margin-top: 187px;
-    margin-left: calc(50vw - 23.5px);
+    margin-left: calc(50vw - 24px);
     flex-grow: 0;
     object-fit: contain;
 }
