@@ -114,7 +114,7 @@ a {
     overflow-x: hidden;
 }
 
-.chevron-up {
+#chevron-up {
     width: 58px;
     height: 52px;
     position: absolute;
@@ -130,7 +130,9 @@ a {
     text-align: left;
     color: #4d4d4d;
 }
-
+#chevron-up .hide {
+    display: none !important;
+}
 .scroll-down {
     width: 30px;
     height: 30px;
@@ -703,7 +705,7 @@ a {
         scroll-snap-stop: always;
         box-sizing: border-box;
     }
-    .chevron-up {
+    #chevron-up {
         width: 58px;
         height: 52px;
         position: absolute;
