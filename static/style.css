@@ -114,7 +114,7 @@ a {
 .chevron-up {
     width: 58px;
     height: 52px;
-    margin-top: -136px;
+    margin-top: calc(750px - 100vh);
     margin-left: 24.5px;
     z-index: 1000;
     font-size: 18px;
@@ -286,10 +286,10 @@ a {
     box-shadow: 0 4px 21px -8px rgb(0 0 0 / 27%);
     background-color: #ffffff;
     margin-top: 32px;
-    margin-left: 13vw;
-    margin-right: 13vw;
-    width: 74vw !important;
-    height: 260px !important;
+    margin-left: calc(50vw - 132px);
+    margin-right: calc(50vw - 132px);
+    width: 264px!important;
+    height: 267px !important;
 }
 .review-name {
     position: absolute;
@@ -331,7 +331,7 @@ a {
     object-fit: contain;
     position: absolute;
     top: 52px;
-    left: calc(37vw - 58px);
+    left: 74px;
 }
 
 .review-nickname {
@@ -353,7 +353,7 @@ a {
     text-align: center;
     position: absolute;
     top: 160px;
-    left: calc(37vw - 70px);
+    left: 62px;
     color: #ffffff;
     font-family: "NotoSansKR",sans-serif;
 }
@@ -458,7 +458,7 @@ a {
 
 .portfolio-profile-box {
     padding-top: 30px;
-    margin-left: 10vw;
+    margin-left: calc(50vw - 145px);
     width: 80vw;
     height: 102px;
     position: relative;
@@ -517,7 +517,7 @@ a {
 
 .portfolio-white-box {
     margin-top: 19px;
-    width: 80vw;
+    width: 290px;
     height: 82.9px;
     flex-grow: 0;
     border-radius: 10px;
@@ -565,7 +565,7 @@ a {
     width: 24px;
     height: 24px;
     position: absolute;
-    margin-left: calc(80vw - 36px);
+    margin-left: 255px;
     margin-top: 30px;
     background-image: url("./img/arrow-right-circle.svg");
 }
