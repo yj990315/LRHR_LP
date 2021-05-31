@@ -8,6 +8,7 @@ html {
 body {
     width: 100%;
     height: 100%;
+    max-width: 760px;
     margin:0;
     overflow: hidden;
     font-family: GmarketSans;
@@ -296,7 +297,7 @@ a {
     top: 15px;
     left: 50%;
     margin-left: -100px;
-    font-family: "NotoSansKR";
+    font-family: "NotoSansKR", sans-serif;
     font-size: 1.6rem;
     font-weight: bold;
     font-stretch: normal;
@@ -321,7 +322,7 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #000000;
-    font-family: "NotoSansKR";
+    font-family: "NotoSansKR", sans-serif;
 }
 
 .review-face {
