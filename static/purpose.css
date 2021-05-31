@@ -37,7 +37,6 @@ select {
     background: url("./img/keyboard-arrow-down.svg") no-repeat 100% 50%;
     background-size: 33px 33px;
     border: 0px;
-    border-bottom: 1.5px solid black !important;
     text-indent: 10px;
 }
 .helptext {
@@ -80,5 +79,13 @@ select {
     padding:0;
     border: 0;
     outline: 0;
-    background-color: transparent;r
+    background-color: transparent;
+}
+
+.select-line {
+    width: 294px;
+    height: 1px;
+    margin-left: calc(50vw - 147px);
+    background-color: #000000;
+  
 }

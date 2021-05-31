@@ -6,6 +6,7 @@
 <div class="title">어떤 품목을 맡기시겠어요?</div>
 <form method="POST" class="post-form">{% csrf_token %}
         {{ type_of_product_form }}
+        <div class="select-line"> </div>
         <div id="fixed-next-button" >
             <div class="status-bar-bg">
                 <div class="status-bar" style="width: 40vw;"></div>

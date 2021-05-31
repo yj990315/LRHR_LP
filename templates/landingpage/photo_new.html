@@ -107,7 +107,7 @@ $(function(){ $("input[type='submit']").click(function(){ var $fileUpload = $("i
             var reader = new FileReader(); //파일을 읽기 위한 FileReader객체 생성
             reader.onload = function (e) { //파일 읽어들이기를 성공했을때 호출되는 이벤트 핸들러
               //str += '<button type="button" class="delBtn" value="'+f.name+'" style="background: red">x</button><br>';
-              str += '<img src="'+e.target.result+'" title="'+f.name+'" style="width:77px; height:73px; border-radius: 10px;"" />';
+              str += '<img src="'+e.target.result+'" title="'+f.name+'" style="width:70px; height:66px; border-radius: 10px;"" />';
               str += '</li></div>';
               $(str).appendTo('#preview');
             } 
@@ -155,6 +155,10 @@ $(function(){ $("input[type='submit']").click(function(){ var $fileUpload = $("i
       <div id="preview"></div>
   </div>
   </table>
+  <div class="photo-comment">
+    * 정확한 단가 측정을 위해 맡기실 상품의 <br>
+    <b>전체 샷</b>과 <b>원하는 작업 부위</b> 사진은 <b>필수</b>입니다.
+  </div>
   <div id="fixed-next-button">
     <div class="status-bar-bg">
         <div class="status-bar" style="width: 60vw;"></div>
