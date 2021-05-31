@@ -162,25 +162,6 @@ a {
     color: #ffffff;
 }
 
-/*MEDIA*/
-@media screen and (min-width:768px){
-    .snap-container{
-        scroll-snap-type:none;
-        overflow:scroll;
-        height:calc(100vh - 70px);
-        min-height: 400px;
-        width: 100vw;
-        overflow-x: hidden;
-    }
-    .snap-container > div {
-        height:calc(100vh - 70px);
-        position: relative;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        box-sizing: border-box;
-    }
-}
-
 .snap-container {
     scroll-snap-type: y mandatory;
     overflow:scroll;
@@ -734,4 +715,23 @@ a {
     font-family: NotoSansKR;
     src:url(Noto_Sans_KR/NotoSansKR-Bold.otf);
     font-weight:700;
+}
+
+/*MEDIA*/
+@media screen and (min-width:768px){
+    .snap-container{
+        scroll-snap-type:none;
+        overflow:scroll;
+        height:calc(100vh - 70px);
+        min-height: 400px;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .snap-container > div {
+        height:calc(100vh - 70px);
+        position: relative;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        box-sizing: border-box;
+    }
 }
