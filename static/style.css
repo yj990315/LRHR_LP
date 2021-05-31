@@ -118,7 +118,7 @@ a {
     width: 58px;
     height: 52px;
     position: absolute;
-    bottom: 12px;
+    bottom: 122px;
     left: 24px;
     z-index: 1000;
     font-size: 18px;
@@ -166,7 +166,7 @@ a {
 .snap-container {
     scroll-snap-type: y mandatory;
     overflow:scroll;
-    height:calc(100vh - 180px);
+    height:calc(100vh - 70px);
     min-height: 400px;
     width: 100vw;
     overflow-x: hidden;
@@ -174,7 +174,7 @@ a {
 }  
 
 .snap-container > div {
-    height:calc(100vh - 180px);
+    height:calc(100vh - 70px);
     min-height: 400px;
     position: relative;
     scroll-snap-align: start;
@@ -702,6 +702,22 @@ a {
         scroll-snap-align: start;
         scroll-snap-stop: always;
         box-sizing: border-box;
+    }
+    .chevron-up {
+        width: 58px;
+        height: 52px;
+        position: absolute;
+        bottom: 12px;
+        left: 24px;
+        z-index: 1000;
+        font-size: 18px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #4d4d4d;
     }
 }
 
