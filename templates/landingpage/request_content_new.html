@@ -8,7 +8,7 @@
     어떤 서비스를 원하시나요?
 </div>
 <form method="POST" action="{% url 'landingpage:request_content_new' estimate_id%}">    {% csrf_token %}
-    <textarea name="content" placeholder="자세한 요청사항을 입력해주세요."></textarea> <br>
+    <textarea name="content" placeholder="자세한 요청사항을 입력해주세요." required></textarea> <br>
     <div class="alert-line" style="margin-top:0px;"></div>
     <div class="alert-title">
         수선 / 리폼 주의사항
