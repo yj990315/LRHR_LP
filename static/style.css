@@ -113,9 +113,10 @@ a {
 
 .chevron-up {
     width: 58px;
-    height: 52px;
-    margin-top: calc(750px - 100vh);
-    margin-left: 24.5px;
+    height: 52px;    
+    position: absolute;
+    top: calc(100vh - 130px);
+    left: 24px;
     z-index: 1000;
     font-size: 18px;
     font-weight: bold;
