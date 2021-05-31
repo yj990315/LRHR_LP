@@ -171,9 +171,11 @@ a {
         min-height: 400px;
         width: 100vw;
         overflow-x: hidden;
+        position: relative;
     }
     .snap-container > div {
         height:calc(100vh - 70px);
+        min-height: 400px;
         position: relative;
         scroll-snap-align: start;
         scroll-snap-stop: always;
@@ -188,10 +190,12 @@ a {
     min-height: 400px;
     width: 100vw;
     overflow-x: hidden;
+    position: relative;
 }  
 
 .snap-container > div {
-    height: 100%;
+    height:calc(100vh - 70px);
+    min-height: 400px;
     position: relative;
     scroll-snap-align: start;
     scroll-snap-stop: always;
