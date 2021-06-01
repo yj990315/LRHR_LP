@@ -282,18 +282,16 @@
             </div>
         </div>
     </div>
-    <div>
+    <div id="fixed_request_button">
         <div id="chevron-up">
             아래로!
             <img src="static/img/scroll-down.png" class="scroll-down">
         </div>
-        <div>
-            <a href="{% url 'landingpage:purpose_new' %}" id="fixed_request_button">
-                <span class="fixed_request_button_content"> 사전접수하기</span>
-            </a>
-        </div>
+        <a href="{% url 'landingpage:purpose_new' %}" class="fixed-button-bg">
+            <span class="fixed_request_button_content"> 사전접수하기</span>
+        </a>
     </div>
-    
+
 </div>
 <script>
     var mySwiper = new Swiper ('.swiper-container', {
