@@ -117,7 +117,7 @@ a {
 #chevron-up {
     width: 58px;
     height: 52px;
-    position: absolute;
+    position: fixed;
     top: 82vh;
     left: 24px;
     z-index: 1000;
