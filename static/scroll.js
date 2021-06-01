@@ -1,6 +1,10 @@
 const scrollDownImg = document.getElementById("chevron-up");
-const currentScrollValue = document.querySelector('html').scrollTop;
+const logo = document.querySelector(".fapislogo")
 
 function scrollDown(){
-    scrollDownImg.style.display = "none";
+    let scrollValue = logo.getBoundingClientRect().top;
+    scrollDownImg.style.display = "block"
+    if (scrollValue < 0){
+        scrollDownImg.style.display = "none";
+    }
 }
