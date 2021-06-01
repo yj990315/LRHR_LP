@@ -1,8 +1,6 @@
-document.addEventListener('scroll', function(){
-    console.log("test")
-    const currentScrollValue = document.documentElement.scrollTop
-    const scrolldown = document.querySelector(".chevron-up");
-    if (currentScrollValue>300){
-        scrolldown.style.display = "none"
-    }
-})
+const scrolldown = document.getElementById("chevron-up");
+const currentScrollValue = document.querySelector('html').scrollTop;
+
+function testScroll(){
+    scrolldown.style.display = "none";
+}
