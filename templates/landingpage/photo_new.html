@@ -49,7 +49,7 @@
         }
     });
 });
-$(function(){ $("input[type='submit']").click(function(){ var $fileUpload = $("input[type='file']"); if (parseInt($fileUpload.get(0).files.length)>2){ alert("You can only upload a maximum of 2 files"); } }); });
+
 </script>
 <script type="text/javascript">
     $(document).ready(function (e){
@@ -139,10 +139,10 @@ $(function(){ $("input[type='submit']").click(function(){ var $fileUpload = $("i
       전체 샷 (1장)
   </div>
   <div class="filebox bs3-primary preview-image">
-      <label for="input_file"></label> 
+      <label for="overall-img"></label> 
       <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
       
-      <input type="file" id="input_file" name="overall-img" class="upload-hidden" required />
+      <input type="file" id="overall-img" name="overall-img" class="upload-hidden" required />
   </div>
   </form>
 <form method="POST" action="{% url 'landingpage:photo_new' estimate_id%}" id="detailImgForm" enctype="multipart/form-data">    {% csrf_token %}
