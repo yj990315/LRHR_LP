@@ -1,6 +1,6 @@
-const scrolldown = document.getElementById("chevron-up");
+const scrollDownImg = document.getElementById("chevron-up");
 const currentScrollValue = document.querySelector('html').scrollTop;
 
-function testScroll(){
-    scrolldown.style.display = "none";
+function scrollDown(){
+    scrollDownImg.style.display = "none";
 }
