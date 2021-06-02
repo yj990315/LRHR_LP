@@ -52,6 +52,7 @@ class Estimate(models.Model):
         'purpose_of_estimate': ' ',
     }
     overall_image = models.ImageField(upload_to='overall-image/')
+    is_done = models.BooleanField(default=False)
     #author = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class Photo(models.Model):

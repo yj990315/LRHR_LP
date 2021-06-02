@@ -120,10 +120,10 @@ li {
   width: 77px;
   height: 73px;
   vertical-align: middle;
-  /* border: 1px solid #ddd; */
   border-radius: 10px;
   background-color: #fff;
-  margin-left: 10px;
+  margin-left: 9px;
+  margin-top: -4px;
 }
 
 .filebox .upload-display img {

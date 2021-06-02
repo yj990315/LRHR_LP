@@ -13,15 +13,17 @@
 <a href="{% url 'landingpage:privacy_pop' %}" class="privacy-button" >
     자세히 보기
 </a>
-<div id="fixed-next-button" >
-    <div class="status-bar-bg">
-        <div class="status-bar" style="width: 100vw;"></div>
+<form method="POST"> {% csrf_token %}
+    <div id="fixed-next-button" >
+        <div class="status-bar-bg">
+            <div class="status-bar" style="width: 100vw;"></div>
+        </div>
+        
+        <button type="submit" onclick="gtag('event', '사전접수 버튼 클릭', { 'event_category': '사전접수', 'event_label': '사전접수_사전접수 버튼 클릭'});" class="save btn btn-default" id="next-button" style="padding-top: 20px" >
+            <span class="fixed_request_button_content"> 네, 동의합니다. </span>
+        </button>
     </div>
-    
-    <a href="{%url 'landingpage:result'%}" onclick="gtag('event', '사전접수 버튼 클릭', { 'event_category': '사전접수', 'event_label': '사전접수_사전접수 버튼 클릭'});" class="save btn btn-default" id="next-button" style="padding-top: 20px" >
-        <span class="fixed_request_button_content"> 네, 동의합니다. </span>
-    </a>
-</div>
+</form>
 {% endblock %}
 
 ”gtag(‘event’, ‘버튼클릭’ {‘event_category’ : ‘모바일전화연결’, ‘event_label’ : ‘오피스’});”

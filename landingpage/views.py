@@ -61,13 +61,18 @@ def basic_information_new(request, estimate_id):
         if form.is_valid():
             form.save()
             """estimate.author = request.user"""
-            return redirect('landingpage:privacy')
+            return redirect('landingpage:privacy', estimate_id)
     else:
         form = BasicInformationForm(instance=estimate)
     return render(request, 'landingpage/basic_information.html', {'basic_information_form' : form})
 
-def privacy(request):
-    return render(request, 'landingpage/privacy.html')
+def privacy(request, estimate_id):
+    estimate = get_object_or_404(Estimate, pk=estimate_id)
+    if request.method == "POST":
+        estimate.is_done = True
+        estimate.save()
+        return redirect('landingpage:result')
+    return render(request, 'landingpage/privacy.html', {'estimate_id' : estimate_id})
 
 def privacy_pop(request):
     return render(request, 'landingpage/privacy_pop.html')
