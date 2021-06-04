@@ -38,6 +38,22 @@ a {
     object-fit: contain;
 }
 
+.kakaotalk{
+    position: absolute;
+    object-fit: contain;
+    width: 54px;
+    top: 46px;
+    right:64px;
+}
+
+.instagram{
+    position: absolute;
+    object-fit: contain;
+    width: 54px;
+    top: 46px;
+    right:12px;
+}
+
 .fapisintro {
     width: 317px;
     font-size: 2.5rem;
