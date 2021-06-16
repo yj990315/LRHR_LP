@@ -10,7 +10,7 @@
 .result-face {
   width: 269px;
   height: 284px;
-  margin-top: 55px;
+  margin-top: 75px;
   margin-left: calc(50vw - 135px);
   object-fit: contain;
   background: url('./img/result-face.png');

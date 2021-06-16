@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
+<link rel="stylesheet" href="{%static 'purpose.css'%}">
     <h1>새로운 견적</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ estimate_form.as_p }}

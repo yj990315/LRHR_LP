@@ -25,11 +25,16 @@
 li {
     list-style: none;
 }
-#preview {
-    margin-left: 117px; 
+#preview1 {
+  margin-left: 117px; 
 }
+
+#preview2 {
+  margin-left: 117px;
+}
+
 .overall-img-title{
-    margin-top: 5px;
+    margin-top: 25px;
     margin-left: 36px;
     height: 41px;
     flex-grow: 0;
@@ -46,7 +51,6 @@ li {
 }
 
 .detail-img-title {
-    margin-top: 22px;
     margin-left: 36px;
     height: 41px;
     flex-grow: 0;
@@ -149,14 +153,28 @@ li {
     background-image: url('./img/image.png');
 }
 
-.filebox {
+.filebox1 {
     width: 100%;
-    height: 73px;
+    height: 100px;
 }
 
 .filebox2 {
     width: 100%;
     height: 73px;
+}
+
+.filebox1.bs3-primary label {
+  display: inline-block;
+  position: absolute;
+  width: 77px;
+  height: 73px;
+  margin-left: 30px;
+  border-radius: 10px;
+  background-image: url('./img/image.png');
+  background-size: 55px 56px;
+  background-color: #d7d7d7;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .filebox2.bs3-primary label {

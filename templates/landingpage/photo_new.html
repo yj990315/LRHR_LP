@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
-<script>
+<!-- <script>
     $(document).ready(function(){
    var fileTarget = $('.filebox .upload-hidden');
 
@@ -50,13 +50,13 @@
     });
 });
 
-</script>
+</script> -->
 <script type="text/javascript">
     $(document).ready(function (e){
-      $(".upload-hidden2").change(function(e){
+      $(".upload-hidden1").change(function(e){
   
         //div 내용 비워주기
-        $('#preview').empty();
+        $('#preview1').empty();
   
         var files = e.target.files;
         var arr =Array.prototype.slice.call(files);
@@ -89,8 +89,85 @@
         }
         return true;
       }
-      var imgTarget = $('.preview-image .upload-hidden');
+      var imgTarget = $('.preview-image1 .upload-hidden1');
       function preview(arr){
+        arr.forEach(function(f){
+          
+          //파일명이 길면 파일명...으로 처리
+          var fileName = f.name;
+          if(fileName.length > 10){
+            fileName = fileName.substring(0,7)+"...";
+          }
+          
+          //div에 이미지 추가
+          var str = '<div style="display: inline-flex; padding-right: 9px; padding-bottom: 9px;"><li>';
+          var index = 0;
+          //이미지 파일 미리보기
+          if(f.type.match('image.*')){
+            var reader = new FileReader(); //파일을 읽기 위한 FileReader객체 생성
+            reader.onload = function (e) { //파일 읽어들이기를 성공했을때 호출되는 이벤트 핸들러
+              //str += '<button type="button" class="delBtn" value="'+f.name+'" style="background: red">x</button><br>';
+              str += '<img src="'+e.target.result+'" title="'+f.name+'" style="width:70px; height:66px; border-radius: 10px;"" />';
+              index++;
+              str += '</li></div>';
+              $(str).appendTo('#preview1');
+            } 
+            reader.readAsDataURL(f);
+          } else{
+            str += '<img src="/resources/img/fileImg.png" title="'+f.name+'" width=70 height=66 />';
+            $(str).appendTo('#preview1');
+          }
+        });//arr.forEach
+      }
+    });
+    function deleteImageAction(index) {
+      console.log("index : "+index);
+      sel_files.splice(index, 1);
+      var img_id ="#img_id_"+index;
+      $(img_id).remove();
+      console.log(sel_files);
+    }
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function (e){
+      $(".upload-hidden2").change(function(e){
+  
+        //div 내용 비워주기
+        $('#preview2').empty();
+  
+        var files = e.target.files;
+        var arr =Array.prototype.slice.call(files);
+        
+        //업로드 가능 파일인지 체크
+        for(var i=0;i<files.length;i++){
+          if(!checkExtension(files[i].name,files[i].size)){
+            return false;
+          }
+        }
+        
+        preview2(arr);
+      });//file change
+      
+      function checkExtension(fileName,fileSize){
+  
+        var regex = new RegExp("(.*?)\.(exe|sh|zip|alz)$");
+        var maxSize = 20971520;  //20MB
+        
+        if(fileSize >= maxSize){
+          alert('파일 사이즈 초과');
+          $("input[type='file']").val("");  //파일 초기화
+          return false;
+        }
+        
+        if(regex.test(fileName)){
+          alert('업로드 불가능한 파일이 있습니다.');
+          $("input[type='file']").val("");  //파일 초기화
+          return false;
+        }
+        return true;
+      }
+      var imgTarget = $('.preview-image2 .upload-hidden2');
+      function preview2(arr){
         arr.forEach(function(f){
           
           //파일명이 길면 파일명...으로 처리
@@ -109,12 +186,12 @@
               //str += '<button type="button" class="delBtn" value="'+f.name+'" style="background: red">x</button><br>';
               str += '<img src="'+e.target.result+'" title="'+f.name+'" style="width:70px; height:66px; border-radius: 10px;"" />';
               str += '</li></div>';
-              $(str).appendTo('#preview');
+              $(str).appendTo('#preview2');
             } 
             reader.readAsDataURL(f);
           } else{
-            str += '<img src="/resources/img/fileImg.png" title="'+f.name+'" width=100 height=100 />';
-            $(str).appendTo('#preview');
+            str += '<img src="/resources/img/fileImg.png" title="'+f.name+'" width=70 height=66 />';
+            $(str).appendTo('#preview2');
           }
         });//arr.forEach
       }
@@ -133,23 +210,23 @@
 <link rel="stylesheet" href="{%static 'photo.css'%}">
 <link rel="stylesheet" href="{%static 'purpose.css'%}">
 <button onclick="history.back()" class="back-button"></button>
-<div class="title">패피스에게 보여주세요!</div>
+<div class="title">보여주세요!</div>
 <form method="POST" action="{% url 'landingpage:photo_new' estimate_id%}" enctype="multipart/form-data">    {% csrf_token %}
   <div class="overall-img-title">
-      전체 샷 (1장)
+      전체 샷 (최소 2장)
   </div>
-  <div class="filebox bs3-primary preview-image">
+  <div class="filebox1 bs3-primary preview-image1">
       <label for="overall-img"></label> 
-      <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
-      <input type="file" id="overall-img" name="overall-img" class="upload-hidden" required />
+      <input type="file" name="overall-img" id="overall-img" class="upload-hidden1" minlength="2" maxlength="5" required multiple>
+      <div id="preview1"> </div>
   </div>
   <div class="detail-img-title">
-      원하는 작업 부위 (최대 5장)
+      원하는 작업 부위 (최소 3장)
   </div>
   <div class="filebox2 bs3-primary preview-image2">
       <label for="detail-img"> </label>
-      <input type="file" name="detail-img" id="detail-img" class="upload-hidden2" minlength="1" maxlength="5" required multiple>
-      <div id="preview"></div>
+      <input type="file" name="detail-img" id="detail-img" class="upload-hidden2" minlength="3" maxlength="5" required multiple>
+      <div id="preview2"> </div>
   </div>
   </table>
   <div class="photo-comment">

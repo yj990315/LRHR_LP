@@ -4,8 +4,8 @@ from . import views
 app_name = 'landingpage'
 
 urlpatterns = [
-    path('new/purpose', views.purpose_new, name='purpose_new'),
-    path('<int:estimate_id>/new/type', views.type_of_product_new, name='type_of_product_new'),
+    path('new/estimate', views.estimate_new, name='estimate_new'),
+    path('<int:estimate_id>/new/product', views.product_new, name='product_new'),
     path('<int:estimate_id>/new/photo', views.photo_new, name='photo_new'),
     path('<int:estimate_id>/new/request_content', views.request_content_new, name='request_content_new'),
     path('<int:estimate_id>/new/', views.basic_information_new, name = 'basic_information'),

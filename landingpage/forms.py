@@ -1,6 +1,7 @@
 from django import forms
 
-from .models import Estimate, Photo
+from .models import Estimate
+
 
 class EstimateForm(forms.ModelForm):
 
@@ -8,42 +9,36 @@ class EstimateForm(forms.ModelForm):
         model = Estimate
         fields = ['purpose_of_estimate','type_of_product']
 
-class TypeOfProductForm(forms.ModelForm):
+class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Estimate
-        fields = ['type_of_product']
-
-class PurposeForm(forms.ModelForm):
-
-    class Meta:
-        model = Estimate
-        fields = ['purpose_of_estimate']
+        fields = ['brand', 'price', 'year']
+        widgets = {
+            'brand': forms.TextInput(),
+            'price': forms.TextInput(attrs={'placeholder':'정가가 아닌 구입 가격을 적어주세요.'}),
+            'year': forms.TextInput(),
+        }
+        labels = {
+            'brand': '브랜드',
+            'price': '구입 가격',
+            'year': '구입 년도',
+        }
 
 class BasicInformationForm(forms.ModelForm):
 
     class Meta:
         model = Estimate
-        fields = ['name','gender','age','phone_number','address']
+        fields = ['name','phone_number','address']
         widgets = {
-            'name': forms.TextInput(attrs={'placeholder': '이름'}),
-            'gender': forms.Select(attrs={'placeholder': '성별'}),
-            'age': forms.NumberInput(attrs={'placeholder': '나이'}),
-            'phone_number': forms.NumberInput(attrs={'placeholder': '전화번호'}),
-            'address': forms.TextInput(attrs={'placeholder':'주소'}),
+            'name': forms.TextInput(),
+            'phone_number': forms.NumberInput(attrs={'placeholder': '예) 01012345678'}),
+            'address': forms.TextInput(),
+        }
+        labels = {
+            'name': '이름',
+            'phone_number': '전화번호',
+            'address': '주소',
         }
         def __init__(self, *args, **kwargs):
          self.fields['age'].error_messages = {'max_length': '올바른 나이를 입력했는지 확인해주세요.'}
-
-class AddInformationForm(forms.ModelForm):
-
-    class Meta:
-        model = Estimate
-        fields = []
-
-class PhotoForm(forms.ModelForm) :
-    class Meta :
-        model = Photo
-        fields = ['detail_image',]
-
-PhotoFormSet = forms.inlineformset_factory(Estimate, Photo, form=PhotoForm, extra=5)

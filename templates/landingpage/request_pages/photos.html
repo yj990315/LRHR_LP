@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-    <h1>새로운 견적</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ photos_form.as_p }}
-        <button type="submit" class="save btn btn-default">다음으로</button>
-    </form>
-{% endblock %}

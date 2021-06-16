@@ -1,0 +1,128 @@
+body {
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    width: 100vw;
+    height: auto;
+}
+form {
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    width: 100vw;
+    height: auto;
+}
+input {
+    width: 296px;
+    height: 44px;
+    font-family: "NotoSansKR", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.34;
+    text-align: left;
+    color: #000000;
+    margin-left: calc(50vw - 148px);
+    margin-top: 2px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(./img/name.svg) no-repeat 100% 50%;
+    background-size: 25px 25px;
+    border: 0px;
+    border-bottom: 1.5px solid black !important;
+    text-indent: 10px;
+    padding-right: 30px;
+}
+label {
+    display: block;
+    margin: 0px;
+    margin-top: 46px;
+    margin-left: calc(50vw - 138px);
+    font-size: 14px;
+    font-weight: bold;
+    color: #8e8e8e;
+}
+
+::placeholder {
+    font-family: "NotoSansKR";
+    font-size: 14px; 
+    font-weight: 500; 
+    color: #636363;
+}
+
+input::placeholder {
+    font-family: "NotoSansKR";
+    font-size: 14px; 
+    font-weight: 500;
+    color: #636363;
+}
+
+input::-webkit-input-placeholder {
+    font-family: "NotoSansKR";
+    font-size: 14px; 
+    font-weight: 500; 
+    color: #636363;
+}
+
+input:-ms-input-placeholder {
+    font-family: "NotoSansKR";
+    font-size: 14px; 
+    font-weight: 500; 
+    color: #636363;
+}
+
+select {
+    margin-top: 22px;
+    text-align: left;
+}
+
+input#id_year {
+    background: url(./img/keyboard-arrow-down.svg) no-repeat 100% 50%;
+    background-size: 33px 33px;
+}
+
+.product-explanation {
+    width: 298px;
+    height: 46px;
+    margin-left: calc(50vw - 149px);
+    flex-grow: 0;
+    font-family: "NotoSansKR", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #545454;
+}
+
+#id_name{
+    margin-top: 38px;
+    text-align: left;
+    padding-right: 30px;
+    background: url(./img/name.svg) no-repeat 100% 50%;
+}
+
+#id_gender {
+    background: url(./img/user.svg) no-repeat 100% 50%;
+}
+
+#id_age {
+    background: url(./img/info.svg) no-repeat 100% 50%;
+}
+
+#id_phone_number {
+    background: url(./img/phone.svg) no-repeat 100% 50%;
+}
+
+#id_address {
+    background: url(./img/home.svg) no-repeat 100% 50%;
+}
+
+.errorlist {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    width: 100vw;
+    margin-top: 68px;
+}

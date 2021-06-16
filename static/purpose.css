@@ -4,22 +4,27 @@ body {
 }
 
 .title {
-  width: 100vw;
-  height: 46px;
-  margin-top: 27px;
-  font-size: 24px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.34;
-  letter-spacing: normal;
-  text-align: center;
-  color: #0052d4;
+    position: absolute;
+    width: 260px;
+    height: 46px;
+    margin-top: 27px;
+    margin-left: calc(50vw - 130px);
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.34;
+    letter-spacing: normal;
+    text-align: center;
+    color: #0052d4;
+    margin-top: 0px; 
+    top: 23px;
 }
 label {
     display: none;
 }
 select {
+    position: absolute;
     width: 296px;
     height: 44px;
     font-family: "NotoSansKR", sans-serif;
@@ -37,6 +42,8 @@ select {
     background: url("./img/keyboard-arrow-down.svg") no-repeat 100% 50%;
     background-size: 33px 33px;
     border: 0px;
+    border-radius: 0px;
+    border-bottom: 2px solid #c9c9c9;;
     text-indent: 10px;
 }
 .helptext {
@@ -80,12 +87,42 @@ select {
     border: 0;
     outline: 0;
     background-color: transparent;
+    z-index: 100;
 }
 
 .select-line {
     width: 294px;
     height: 1px;
     margin-left: calc(50vw - 147px);
-    background-color: #000000;
-  
+    background-color: #000000; 
+}
+
+#purpose_of_estimate_title {
+    position: absolute;
+    top: 109px;
+    left: calc(50vw - 138px);
+    font-size: 14px;
+    font-weight: bold;
+    color: #8e8e8e;
+}
+
+#type_of_product_title {
+    position: absolute;
+    top: 225px;
+    left: calc(50vw - 138px);
+    font-size: 14px;
+    font-weight: bold;
+    color: #8e8e8e;
+}
+
+#id_purpose_of_estimate {
+    position: absolute;
+    top: 126px;
+    margin-top: 0px;
+}
+
+#id_type_of_product {
+    position: absolute;
+    top: 243px;
+    margin-top: 0px;
 }

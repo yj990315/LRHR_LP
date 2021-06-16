@@ -3,10 +3,15 @@
 {% load static %}
 <link rel="stylesheet" href="{%static 'purpose.css'%}">
 <button onclick="history.back()" class="back-button"></button>
-<div class="title">어떤 서비스를 원하시나요?</div>
+<div class="title">알려주세요!</div>
 <form method="POST" class="post-form">{% csrf_token %}
         {{ purpose_form }}
-        <div class="select-line"> </div>
+        <div id="purpose_of_estimate_title">
+            서비스
+        </div>
+        <div id="type_of_product_title">
+            품목
+        </div>
         <div id="fixed-next-button" >
             <div class="status-bar-bg">
                 <div class="status-bar" style="width: 20vw;"></div>
@@ -16,5 +21,4 @@
             </button>
         </div>
 </form>
-
 {% endblock %}

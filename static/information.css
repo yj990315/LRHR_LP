@@ -1,5 +1,5 @@
 input {
-    width: 296px;
+width: 296px;
 height: 44px;
 font-family: "NotoSansKR", sans-serif;
 font-size: 18px;
@@ -8,7 +8,7 @@ line-height: 1.34;
 text-align: left;
 color: #000000;
 margin-left: calc(50vw - 148px);
-margin-top: 22px;
+margin-top: 10px;
 -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
@@ -26,18 +26,9 @@ select {
 }
 
 #id_name{
-    margin-top: 38px;
     text-align: left;
     padding-right: 30px;
     background: url(./img/name.svg) no-repeat 100% 50%;
-}
-
-#id_gender {
-    background: url(./img/user.svg) no-repeat 100% 50%;
-}
-
-#id_age {
-    background: url(./img/info.svg) no-repeat 100% 50%;
 }
 
 #id_phone_number {
@@ -55,4 +46,17 @@ select {
     position: absolute;
     width: 100vw;
     margin-top: 68px;
+}
+
+label {
+    display: block;
+    margin-top: 30px;
+    margin-left: calc(50vw - 138px);
+    flex-grow: 0;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.34;
+    text-align: left;
+    color: #8e8e8e;
+}
 }

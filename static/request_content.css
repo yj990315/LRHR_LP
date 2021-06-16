@@ -2,7 +2,7 @@ textarea {
     resize: none;
     width: 294px;
     height: 200px;
-    margin-top: 18px;
+    margin-top: 36px;
     margin-left: calc(50vw - 147px);
     border: none;
     text-decoration: none;
@@ -17,10 +17,14 @@ textarea {
 }
 
 body {
-    overflow: scroll !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    width: 100vw;
 }
 form {
-    overflow: scroll !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    width: 100vw;
 }
 textarea::placeholder {
   font-family: "NotoSansKR", sans-serif;

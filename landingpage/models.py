@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django.core.validators import MinLengthValidator, MaxLengthValidator
 phone_min_validator = MinLengthValidator(10, "- 없이 올바른 전화번호를 입력했는지 확인해주세요.")
 phone_max_validator = MaxLengthValidator(12, "- 없이 올바른 전화번호를 입력했는지 확인해주세요.")
-
 class Estimate(models.Model):
     PURPOSE = (
         ('a', '수선'),
@@ -36,25 +35,20 @@ class Estimate(models.Model):
     name = models.CharField(max_length = 10, help_text = '고객님의 이름을 입력해주세요.')
     phone_number = models.CharField(max_length = 11, help_text = '고객님의 전화 번호를 입력해주세요.', validators=[phone_min_validator, phone_max_validator])
     address = models.TextField(help_text = '고객님의 주소를 입력해주세요.')
-    age = models.CharField(max_length = 3, help_text='고객님의 나이를 입력해주세요.')
-    GENDER = (
-        ('m', '남자'),
-        ('f', '여자'),
-    )
-    gender = models.CharField(
-        max_length = 1,
-        choices = GENDER,
-        default = 'm',
-        help_text='고객님의 성별을 선택해주세요',
-    )
     request_content = models.TextField(max_length=1000, default='전달하실 요청사항을 자세히 입력해주세요.')
     labels = {
         'purpose_of_estimate': ' ',
     }
-    overall_image = models.ImageField(upload_to='overall-image/')
     is_done = models.BooleanField(default=False)
+    brand = models.TextField(max_length=20)
+    price = models.TextField(max_length=20)
+    year = models.TextField(max_length=20)
     #author = models.ForeignKey(User, on_delete=models.CASCADE)
 
-class Photo(models.Model):
+class OverallImage(models.Model):
+    estimate = models.ForeignKey('Estimate', on_delete = models.CASCADE)
+    overall_image = models.ImageField(upload_to='overall-image/')
+
+class DetailImage(models.Model):
     estimate = models.ForeignKey('Estimate', on_delete = models.CASCADE)
     detail_image = models.ImageField(upload_to='detail-image/')

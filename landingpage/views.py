@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
-from .models import Estimate, Photo
-from .forms import TypeOfProductForm, PurposeForm, AddInformationForm, BasicInformationForm
+from .models import Estimate, OverallImage, DetailImage
+from .forms import EstimateForm, ProductForm, BasicInformationForm
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 
@@ -9,35 +9,37 @@ def index(request):
     return render(request, 'landingpage/main.html')
 
 #@login_required(login_url='common:login')
-def purpose_new(request):
+def estimate_new(request):
     estimate = Estimate()
-    form = PurposeForm(request.POST or None, instance = estimate)
+    form = EstimateForm(request.POST or None, instance = estimate)
     if request.method == "POST":
         if form.is_valid():
             form.save()
             """estimate.author = request.user"""
-            return redirect('landingpage:type_of_product_new', estimate.id)
+            return redirect('landingpage:product_new', estimate.id)
     return render(request, 'landingpage/request_pages/purpose.html', {'purpose_form' : form})
 
 #@login_required(login_url='common:login')
-def type_of_product_new(request, estimate_id):
+def product_new(request, estimate_id):
     estimate = get_object_or_404(Estimate, pk=estimate_id)
-    form = TypeOfProductForm(request.POST or None, instance = estimate)
+    form = ProductForm(request.POST or None, instance = estimate)
     if request.method == "POST":
         if form.is_valid():
             form.save()
             return redirect('landingpage:photo_new', estimate.id)
-    return render(request, 'landingpage/request_pages/type_of_product.html', {'type_of_product_form' : form})
+    return render(request, 'landingpage/request_pages/product.html', {'product_form' : form})
 
 # @login_required(login_url='common:login')
 def photo_new(request, estimate_id):
     estimate = get_object_or_404(Estimate, pk=estimate_id)
     if request.method == 'POST':
-        if 'overall-img' in request.FILES:
-            estimate.overall_image = request.FILES['overall-img']
-            estimate.save()
+        for img in request.FILES.getlist('overall-img'):
+            photo = OverallImage()
+            photo.estimate = estimate
+            photo.overall_image = img
+            photo.save()
         for img in request.FILES.getlist('detail-img'):
-            photo = Photo()
+            photo = DetailImage()
             photo.estimate = estimate
             photo.detail_image = img
             photo.save()
