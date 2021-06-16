@@ -42,7 +42,37 @@ class Estimate(models.Model):
     is_done = models.BooleanField(default=False)
     brand = models.TextField(max_length=20, blank=True)
     price = models.TextField(max_length=20, blank=True)
-    year = models.TextField(max_length=20, blank=True)
+    YEAR = (
+        ('0', '기억 안 남'),
+        ('1', '2021년'),
+        ('2', '2020년'),
+        ('3', '2019년'),
+        ('4', '2018년'),
+        ('5', '2017년'),
+        ('6', '2016년'),
+        ('7', '2015년'),
+        ('8', '2014년'),
+        ('9', '2013년'),
+        ('10', '2012년'),
+        ('11', '2011년'),
+        ('12', '2010년'),
+        ('13', '2009년'),
+        ('14', '2008년'),
+        ('15', '2007년'),
+        ('16', '2006년'),
+        ('17', '2005년'),
+        ('18', '2004년'),
+        ('19', '2003년'),
+        ('20', '2002년'),
+        ('21', '2001년'),
+        ('22', '2000년 이전'),
+    )
+    year = models.CharField(
+        max_length = 2,
+        choices = YEAR,
+        default='1',
+        blank=False,
+    )
     #author = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class OverallImage(models.Model):

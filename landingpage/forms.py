@@ -2,22 +2,24 @@ from django import forms
 
 from .models import Estimate
 
-
 class EstimateForm(forms.ModelForm):
-
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.label_suffix = ""
     class Meta:
         model = Estimate
         fields = ['purpose_of_estimate','type_of_product']
 
 class ProductForm(forms.ModelForm):
-
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.label_suffix = ""
     class Meta:
         model = Estimate
         fields = ['brand', 'price', 'year']
         widgets = {
             'brand': forms.TextInput(),
-            'price': forms.TextInput(attrs={'placeholder':'정가가 아닌 구입 가격을 적어주세요.'}),
-            'year': forms.TextInput(),
+            'price': forms.NumberInput(attrs={'placeholder':'정가가 아닌 구입 가격을 적어주세요.'}),
         }
         labels = {
             'brand': '브랜드',
@@ -26,7 +28,9 @@ class ProductForm(forms.ModelForm):
         }
 
 class BasicInformationForm(forms.ModelForm):
-
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.label_suffix = ""
     class Meta:
         model = Estimate
         fields = ['name','phone_number','address']
