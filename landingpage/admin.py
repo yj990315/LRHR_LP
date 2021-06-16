@@ -9,8 +9,8 @@ class DetailImageInline(admin.TabularInline):
 
 class EstimateAdmin(admin.ModelAdmin):
     inlines = (OverallImageInline, DetailImageInline)
-    search_fields = ['id']
-    list_display = ['id', 'create_date', 'is_done' ]
+    search_fields = ['id', 'name', 'brand']
+    list_display = ['id', 'name', 'brand', 'purpose_of_estimate', 'create_date', 'is_done' ]
 
 
 admin.site.register(Estimate, EstimateAdmin)
