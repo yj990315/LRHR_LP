@@ -15,7 +15,8 @@ appearance: none;
 background: url(./img/keyboard-arrow-down.svg) no-repeat 100% 50%;
 background-size: 33px 33px;
 border: 0px;
-border-bottom: 1.5px solid black !important;
+border-radius: 0px;
+border-bottom: 2px solid #c9c9c9;
 text-indent: 10px;
 padding-right: 30px;
 }

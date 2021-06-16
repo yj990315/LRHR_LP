@@ -27,7 +27,8 @@ input {
     background: url(./img/name.svg) no-repeat 100% 50%;
     background-size: 25px 25px;
     border: 0px;
-    border-bottom: 1.5px solid black !important;
+    border-radius: 0px;
+    border-bottom: 2px solid #c9c9c9;
     text-indent: 10px;
     padding-right: 30px;
 }
