@@ -40,9 +40,9 @@ class Estimate(models.Model):
         'purpose_of_estimate': ' ',
     }
     is_done = models.BooleanField(default=False)
-    brand = models.TextField(max_length=20)
-    price = models.TextField(max_length=20)
-    year = models.TextField(max_length=20)
+    brand = models.TextField(max_length=20, blank=True)
+    price = models.TextField(max_length=20, blank=True)
+    year = models.TextField(max_length=20, blank=True)
     #author = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class OverallImage(models.Model):
