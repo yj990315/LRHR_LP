@@ -25,4 +25,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('landingpage/', include('landingpage.urls')),
     path('common/', include('common.urls')),
+    path('robots.txt', views.robots),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

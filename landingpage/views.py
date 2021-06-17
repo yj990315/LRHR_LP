@@ -4,6 +4,9 @@ from .models import Estimate, OverallImage, DetailImage
 from .forms import EstimateForm, ProductForm, BasicInformationForm
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
+from config import settings
+
+import os
 
 def index(request):
     return render(request, 'landingpage/main.html')
@@ -92,6 +95,13 @@ def add_information_new(request, estimate_id):
     else:
         add_information_form = AddInformationForm()
     return render(request, 'landingpage/add_information.html', {'add_information_form' : add_information_form})
+
+def robots(request):
+    f = open(os.path.join(settings.BASE_DIR, 'robots.txt'), 'r')
+    file_content = f.read()
+    f.close()
+    
+    return HttpResponse(file_content, content_type="text/plain")
 
 
 #@login_required(login_url='common:login')
