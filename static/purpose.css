@@ -86,6 +86,10 @@ select {
     height: 70px;
 }
 
+#next-button:active .fixed_request_button_content{
+    color: #a4b4ff;
+}
+
 .back-button {
     width: 19px;
     height: 19px;
