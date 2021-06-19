@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     ".fapis.io",
     "127.0.0.1",
     "3.34.1.242",
+    "localhost"
 ]
 
 # Application definition

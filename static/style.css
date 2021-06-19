@@ -38,20 +38,27 @@ a {
     object-fit: contain;
 }
 
-.kakaotalk{
-    position: absolute;
+.instagram{
+    position: relative;
     object-fit: contain;
-    width: 54px;
-    top: 46px;
-    right:64px;
+    width: 33.6px;
 }
 
-.instagram{
-    position: absolute;
+.kakaotalk{
+    position: relative;
     object-fit: contain;
-    width: 54px;
-    top: 46px;
-    right:12px;
+    width: 40.6px;
+    margin: 0 20px 0 20px
+}
+
+.facebook {
+    position: relative;
+    object-fit: contain;
+    width: 31px;
+}
+
+.sns-icons{
+   text-align: center;
 }
 
 .fapisintro {
@@ -86,7 +93,7 @@ a {
     background-color: #4874f2;
 }
 
-.request_button:active .request_button_content{
+.request_button:active.request_button_content{
     color: #a4b4ff;
 }
 
@@ -718,6 +725,33 @@ a {
     height: 1px;
     flex-grow: 0;
     background-color: #8b8b8b;
+}
+
+.techlife {
+    width: 269px;
+    height: 238px;
+    margin-left: calc(50vw - 130px);
+    margin-top: 58px;
+    object-fit: contain;
+}
+
+.info-content {
+    width: 238px;
+    height: 131px;
+    margin: 28px auto 23px;
+    font-family: NotoSansKR;
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.info-content > div {
+    margin-top: 10px;
 }
 
 /*MEDIA*/
