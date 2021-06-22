@@ -517,7 +517,7 @@ a {
 
 .process-title{
     position: absolute;
-    top: -26px;
+    top: -20px;
     width: 100%;
     height: 28px;
     font-family: GmarketSans;
@@ -529,7 +529,7 @@ a {
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
-    left : 1px;
+    left : 2px;
 }
 
 .title-line{

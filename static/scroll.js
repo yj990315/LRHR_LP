@@ -12,7 +12,7 @@ function scrollDown(){
         scrollDownImg.style.display = "none";
         if (scrollValue < -1400){
             requestButton.style.display = "none"
-            if (scrollValue < -4500){
+            if (scrollValue < -4700){
                 requestButton.style.display = "block"
             }
         }
