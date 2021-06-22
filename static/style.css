@@ -653,7 +653,7 @@ a {
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
-    bottom: 140px;
+    bottom: 130px;
     z-index: 3;
 }
 
@@ -671,7 +671,7 @@ a {
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
-    bottom: 50px;
+    bottom: 40px;
 }
 
 .suggestion-title {
@@ -867,7 +867,7 @@ a {
     width: 100%;
     position: absolute;
     margin-top: 31px;
-    text-shadow: 0 2px 5px rgb(0 0 0 / 25%);
+    /* text-shadow: 0 2px 5px rgb(0 0 0 / 25%); */
     font-size: 30px;
     font-weight: bold;
     font-stretch: normal;
@@ -916,7 +916,7 @@ a {
     width: 100%;
     height: 40px;
     flex-grow: 0;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    /* text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); */
     font-size: 16px;
     font-weight: bold;
     font-stretch: normal;
