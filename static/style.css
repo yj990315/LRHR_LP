@@ -517,7 +517,7 @@ a {
 
 .process-title{
     position: absolute;
-    top: -21px;
+    top: -21.5px;
     width: 100%;
     height: 28px;
     font-family: GmarketSans;
@@ -604,7 +604,7 @@ a {
     position: relative;
     width: 654px;
     height: 654px;
-    bottom: -320px;
+    bottom: -340px;
     left: -50px;
 }
 
@@ -630,10 +630,10 @@ a {
 .hands{
     object-fit: contain;
     position: absolute;
-    width: 880.66px;
-    height: 880.11px;
+    width: 860.66px;
+    height: 860.11px;
     z-index: 3;
-    bottom: -180px;
+    bottom: -200px;
     margin-left: calc(50vw - 440px)
 }
 
