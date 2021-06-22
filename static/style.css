@@ -536,7 +536,7 @@ a {
     z-index: 2;
     position: relative;
     top: 48px;
-    width: 130px;
+    width: 128px;
     height: 10px;
     display: flex;
     flex-direction: column ;
@@ -545,7 +545,7 @@ a {
     gap: 10px;
     box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.25);
     background-color: #cefa05;
-    left: 27px;
+    left: 31px;
 }
 
 .process-content{
@@ -576,7 +576,7 @@ a {
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.6;
+    line-height: 170%;
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
@@ -646,7 +646,7 @@ a {
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.58;
+    line-height: 170%;
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
