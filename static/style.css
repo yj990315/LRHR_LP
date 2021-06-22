@@ -249,7 +249,7 @@ a {
 .snap-container {
     scroll-snap-type: y mandatory;
     overflow:scroll;
-    height:calc(100vh - 100px);
+    height:calc(100vh - 105px);
     /* height: 100vh; */
     min-height: 400px;
     width: 100vw;
@@ -258,7 +258,7 @@ a {
 }  
 
 .snap-container > div {
-    height:calc(100vh - 100px);
+    height:calc(100vh - 105px);
     /* height: 100vh; */
     min-height: 400px;
     position: relative;
