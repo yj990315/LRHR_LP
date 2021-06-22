@@ -630,11 +630,13 @@ a {
 .hands{
     object-fit: contain;
     position: absolute;
-    width: 860.66px;
-    height: 860.11px;
+    width: 840.66px;
+    height: 840.11px;
     z-index: 3;
-    bottom: -200px;
-    margin-left: calc(50vw - 440px)
+    bottom: -185px;
+    margin-left: calc(50vw - 440px);
+    overflow: hidden;
+    
 }
 
 .process-content-estimate{
