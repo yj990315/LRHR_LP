@@ -249,7 +249,7 @@ a {
 .snap-container {
     scroll-snap-type: y mandatory;
     overflow:scroll;
-    height:calc(100vh - 80px);
+    height:calc(100vh - 90px);
     /* height: 100vh; */
     min-height: 400px;
     width: 100vw;
@@ -258,7 +258,7 @@ a {
 }  
 
 .snap-container > div {
-    height:calc(100vh - 80px);
+    height:calc(100vh - 90px);
     /* height: 100vh; */
     min-height: 400px;
     position: relative;
@@ -571,7 +571,7 @@ a {
     margin-left: calc(50vw - 115px);
     width: 230px;
     height: 78px;
-    font-family: NotoSansKR;
+    font-family: NotoSansKR-regular;
     font-size: 16px;
     font-weight: 500;
     font-stretch: normal;
@@ -659,7 +659,7 @@ a {
     margin-left: calc(50vw - 160px);
     width: 240px;
     height: 78px;
-    font-family: NotoSansKR;
+    font-family: NotoSansKR-regular;
     font-size: 17px;
     font-weight: 500;
     font-stretch: normal;
