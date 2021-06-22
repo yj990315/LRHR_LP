@@ -61,6 +61,46 @@ a {
    text-align: center;
 }
 
+.info-logo{
+    position: absolute;
+    height: 32px;
+    width: 95px;
+    object-fit: contain;
+    margin-top: 137px;
+    margin-left: calc(50vw - 166px);
+}
+
+.intro-text{
+    position: absolute;
+    width: 299px;
+    height: 37px;
+    margin-left: calc(50vw - 166px);
+    font-family: NotoSansKR;
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: normal;
+    text-align: left;
+    color: #191f28;
+}
+
+.intro-sub{
+    position: absolute;
+    width: 332px;
+    height: 151px;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 27px;
+    color: #191F28;
+    margin-top: 251px;
+    margin-left: calc(50vw - 166px);
+    text-align: left;
+}
+
 .fapisintro {
     width: 317px;
     font-size: 2.5rem;
@@ -209,7 +249,8 @@ a {
 .snap-container {
     scroll-snap-type: y mandatory;
     overflow:scroll;
-    height:calc(100vh - 70px);
+    /* height:calc(100vh - 70px); */
+    height: 100vh;
     min-height: 400px;
     width: 100vw;
     overflow-x: hidden;
@@ -217,7 +258,8 @@ a {
 }  
 
 .snap-container > div {
-    height:calc(100vh - 70px);
+    /* height:calc(100vh - 70px); */
+    height: 100vh;
     min-height: 400px;
     position: relative;
     scroll-snap-align: start;
@@ -473,6 +515,162 @@ a {
     top: 210px !important;
 }
 
+.process-title{
+    position: absolute;
+    top: -26px;
+    width: 100%;
+    height: 28px;
+    font-family: GmarketSansTTF;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    left : 1px;
+}
+
+.title-line{
+    z-index: 2;
+    position: relative;
+    top: 48px;
+    width: 130px;
+    height: 10px;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.25);
+    background-color: #cefa05;
+    left: 27px;
+}
+
+.process-content{
+    position: absolute;
+    margin-left: calc(50vw - 115px);
+    top: 85px;
+    width: 230px;
+    height: 141px;
+    font-family: GmarketSansTTF;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.58;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.process-sub{
+    position: absolute;
+    top: 240px;
+    margin-left: calc(50vw - 115px);
+    width: 230px;
+    height: 78px;
+    font-family: NotoSansKR;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.eclipse-bg1{
+    position: relative;
+    width: 612px;
+    height: 612px;
+    margin-left: calc(50vw - 306px);
+    bottom: -350px;
+}
+
+.eclipse-bg2{
+    position: relative;
+    width: 612px;
+    height: 612px;
+    margin-left: calc(50vw - 306px);
+    top: -350px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.eclipse-bg3{
+    position: relative;
+    width: 654px;
+    height: 654px;
+    bottom: -320px;
+    left: -50px;
+}
+
+.portfolio-ui{
+    position: absolute;
+    width: 278px;
+    height: 378px;;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.estimate-ui{
+    position: absolute;
+    width: 360px;
+    height: 356px;
+    margin-left: calc(50vw - 180px);
+    top: 76px;
+    z-index: 2;
+}
+
+.hands{
+    object-fit: contain;
+    position: absolute;
+    width: 880.66px;
+    height: 880.11px;
+    z-index: 3;
+    bottom: -180px;
+    margin-left: calc(50vw - 440px)
+}
+
+.process-content-estimate{
+    position: absolute;
+    margin-left: calc(50vw - 160px);
+    width: 250px;
+    height: 94px;
+    font-family: GmarketSansTTF;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.58;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    bottom: 140px;
+    z-index: 3;
+}
+
+.process-sub-estimate{
+    position: absolute;
+    margin-left: calc(50vw - 160px);
+    width: 240px;
+    height: 78px;
+    font-family: NotoSansKR;
+    font-size: 17px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    bottom: 50px;
+}
+
 .suggestion-title {
     position: absolute;
     top: 422px;
@@ -497,6 +695,17 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: rgba(0, 0, 0, 0.7);
+}
+
+.requestImg{
+    position: absolute;
+    object-fit: contain;
+    width: 243px;
+    height: 298px;
+    margin-left: calc(50vw - 121.5px);
+    bottom: -2px;
+    filter: drop-shadow(-13px -4px 15px rgba(0, 0, 0, 0.25));
+
 }
 
 .stock {
