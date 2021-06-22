@@ -517,7 +517,7 @@ a {
 
 .process-title{
     position: absolute;
-    top: -20px;
+    top: -21px;
     width: 100%;
     height: 28px;
     font-family: GmarketSans;
@@ -568,8 +568,8 @@ a {
 .process-sub{
     position: absolute;
     top: 240px;
-    margin-left: calc(50vw - 115px);
-    width: 230px;
+    margin-left: calc(50vw - 130px);
+    width: 260px;
     height: 78px;
     font-family: NotoSansKR-regular;
     font-size: 16px;
@@ -619,9 +619,10 @@ a {
 
 .estimate-ui{
     position: absolute;
-    width: 360px;
-    height: 356px;
-    margin-left: calc(50vw - 180px);
+    object-fit: contain;
+    width: 330px;
+    height: 330px;
+    margin-left: calc(50vw - 165px);
     top: 76px;
     z-index: 2;
 }
@@ -638,7 +639,7 @@ a {
 
 .process-content-estimate{
     position: absolute;
-    margin-left: calc(50vw - 160px);
+    margin-left: 36px;
     width: 250px;
     height: 94px;
     font-family: GmarketSans;
@@ -656,8 +657,8 @@ a {
 
 .process-sub-estimate{
     position: absolute;
-    margin-left: calc(50vw - 160px);
-    width: 240px;
+    margin-left: 36px;
+    width: 260px;
     height: 78px;
     font-family: NotoSansKR-regular;
     font-size: 17px;
