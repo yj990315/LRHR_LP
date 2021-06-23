@@ -530,3 +530,14 @@
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
   }
+
+  @media screen and (min-width:760px) {
+    .swiper-button-prev{
+      left: 70px;
+    }
+    
+    .swiper-button-next{
+      right: 70px;
+    }
+    
+}
