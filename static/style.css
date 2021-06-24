@@ -1143,6 +1143,7 @@ a {
         scroll-snap-stop: always;
         box-sizing: border-box;
     }
+    
     .review-box {
         border-radius: 10px;
         box-shadow: 0 4px 21px -8px rgb(0 0 0 / 27%);
@@ -1160,7 +1161,7 @@ a {
         height: 100vh;
         background-size: 417px 651px;
         position: absolute;
-        top: 34px;
+        top: 0;
         left: 50%;
         margin-left: -57vw;
         background-repeat: no-repeat;
@@ -1565,8 +1566,16 @@ a {
         text-align: center;
         color: #000000;
     }
-
-
+    .fapislogo{
+        left: 35px;
+    }
+    .fapisintro{
+        left: 38px;
+    }
+    .request_button{
+        left: 37px;
+    }
+    
 }
 
 @font-face {
