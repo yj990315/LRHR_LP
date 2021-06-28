@@ -776,18 +776,20 @@ a {
 
 .eclipse-bg1{
     position: relative;
-    width: 612px;
-    height: 612px;
-    margin-left: calc(50vw - 306px);
-    bottom: -350px;
+    width: 0;
+    height: 0;
+    margin-left: calc(50vw - 15px);
+    bottom: 0;
 }
 
 .eclipse-bg2{
     position: relative;
-    width: 612px;
-    height: 612px;
-    margin-left: calc(50vw - 306px);
-    top: -350px;
+    object-fit: contain;
+    /* width: 612px; */
+    height: calc(100vh - 150px);
+    margin-left: calc(50vw - 290px);
+    /* top: -60vw; */
+    bottom: 40vh;
     overflow: hidden;
     z-index: 1;
 }
@@ -1398,7 +1400,11 @@ a {
         z-index: 2
     }
     .eclipse-bg1 {
-        display: none;
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin-left: calc(50vw - 150px);
+        bottom: -350px;
     }
     .eclipse-bg2 {
         position: relative;
