@@ -71,9 +71,9 @@ a {
 
 .intro-text{
     position: absolute;
-    width: 299px;
+    width: 300px;
     height: 37px;
-    margin-left: calc(50vw - 166px);
+    margin-left: calc(50vw - 169px);
     font-family: NotoSansKR;
     font-size: 22px;
     font-weight: bold;
@@ -87,7 +87,7 @@ a {
 
 .intro-sub{
     position: absolute;
-    width: 332px;
+    width: 336px;
     height: 151px;
     font-family: Noto Sans KR;
     font-style: normal;
@@ -96,7 +96,8 @@ a {
     line-height: 27px;
     color: #191F28;
     margin-top: 251px;
-    margin-left: calc(50vw - 166px);
+    left: 50%;
+    margin-left: -168px;
     text-align: left;
 }
 
@@ -1104,7 +1105,7 @@ a {
 }
 
 .info-content {
-    width: 238px;
+    width: 258px;
     height: 131px;
     margin: 30px auto 25px;
     font-family: NotoSansKR;
@@ -1553,7 +1554,7 @@ a {
         object-fit: contain;
     }
     .info-content {
-        width: 238px;
+        width: 280px;
         height: 131px;
         margin: 1px auto 28px;
         font-family: NotoSansKR;
