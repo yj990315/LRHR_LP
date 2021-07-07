@@ -3,6 +3,9 @@
 {% load static %}
 <link rel="stylesheet" href="{%static 'purpose.css'%}">
 <link rel="stylesheet" href="{%static 'product.css'%}">
+<div class="status-bar-bg">
+    <div class="status-bar" style="width: 40vw;"></div>
+</div>
 <button onclick="history.back()" class="back-button"></button>
 <div class="title">좀만 더 알려주세요!</div>
 <form method="POST" class="post-form">{% csrf_token %}
@@ -16,9 +19,6 @@
         방지하기 위한 일종의 <b>‘케어 계약서’</b> 입니다.
     </div>
     <div id="fixed-next-button" >
-        <div class="status-bar-bg">
-            <div class="status-bar" style="width: 40vw;"></div>
-        </div>
         <button type="submit" class="save btn btn-default" id="next-button" style="padding-top: 0px">
             <span class="fixed_request_button_content"> 다음으로 </span>
         </button>

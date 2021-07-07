@@ -3,6 +3,9 @@
 {% load static %}
 <link rel="stylesheet" href="{%static 'purpose.css'%}">
 <link rel="stylesheet" href="{%static 'request_content.css'%}">
+<div class="status-bar-bg">
+    <div class="status-bar" style="width: 80vw;"></div>
+</div>
 <button onclick="history.back()" class="back-button"> </button>
 <div class="title">
     적어주세요!
@@ -32,9 +35,6 @@
         사전 고지해드립니다.  
     </div>
     <div id="fixed-next-button" >
-        <div class="status-bar-bg">
-            <div class="status-bar" style="width: 80vw;"></div>
-        </div>
         <button type="submit" class="save btn btn-default" id="next-button" style="padding-top: 0px">
             <span class="fixed_request_button_content"> 다음으로 </span>
         </button>

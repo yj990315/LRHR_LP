@@ -3,6 +3,9 @@
 {% load static %}
 <link rel="stylesheet" href="{%static 'purpose.css'%}">
 <link rel="stylesheet" href="{%static 'result.css'%}">
+<div class="status-bar-bg">
+    <div class="status-bar" style="width: 100vw;"></div>
+</div>
 <button onclick="history.back()" class="back-button"></button>
 <div class="title">
     완료되었습니다!
@@ -15,9 +18,6 @@
     본 런칭 시 카카오톡으로 알려드릴게요! 
 </div>
 <div id="fixed-next-button" >
-    <div class="status-bar-bg">
-        <div class="status-bar" style="width: 100vw;"></div>
-    </div>
     <a href="{%url 'index'%}" class="save btn btn-default" id="next-button" style="padding-top: 20px">
         <span class="fixed_request_button_content"> 진짜 완료! </span>
     </a>

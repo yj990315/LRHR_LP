@@ -3,6 +3,9 @@
 {% load static %}
 <link rel="stylesheet" href="{%static 'purpose.css'%}">
 <link rel="stylesheet" href="{%static 'privacy.css'%}">
+<div class="status-bar-bg">
+    <div class="status-bar" style="width: 100vw;"></div>
+</div>
 <button onclick="history.back()" class="back-button"></button>
 <div class="title">원 모어 띵.</div>
 <div class="privacy-content">
@@ -15,9 +18,6 @@
 </a>
 <form method="POST"> {% csrf_token %}
     <div id="fixed-next-button" >
-        <div class="status-bar-bg">
-            <div class="status-bar" style="width: 100vw;"></div>
-        </div>
         <button type="submit" onclick="gtag('event', '사전접수 버튼 클릭', { 'event_category': '사전접수', 'event_label': '사전접수_사전접수 버튼 클릭'});" class="save btn btn-default" id="next-button">
             <span class="fixed_request_button_content"> 네, 동의합니다. </span>
         </button>

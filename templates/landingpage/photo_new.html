@@ -209,11 +209,14 @@
 
 <link rel="stylesheet" href="{%static 'photo.css'%}">
 <link rel="stylesheet" href="{%static 'purpose.css'%}">
+<div class="status-bar-bg">
+  <div class="status-bar" style="width: 60vw;"></div>
+</div>
 <button onclick="history.back()" class="back-button"></button>
 <div class="title">보여주세요!</div>
 <form method="POST" action="{% url 'landingpage:photo_new' estimate_id%}" enctype="multipart/form-data">    {% csrf_token %}
   <div class="overall-img-title">
-      전체 샷 (최소 2장)
+      전체 샷 (최소 2장)
   </div>
   <div class="filebox1 bs3-primary preview-image1">
       <label for="overall-img"></label> 
@@ -234,9 +237,6 @@
     <b>전체 샷</b>과 <b>원하는 작업 부위</b> 사진은 <b>필수</b>입니다.
   </div>
   <div id="fixed-next-button">
-    <div class="status-bar-bg">
-        <div class="status-bar" style="width: 60vw;"></div>
-    </div>
     <button type="submit" class="save btn btn-default" id="next-button" style="padding-top: 0px">
         <span class="fixed_request_button_content"> 다음으로 </span>
     </button>

@@ -3,6 +3,9 @@
 {% load static %}
 <link rel="stylesheet" href="{%static 'purpose.css'%}">
 <link rel="stylesheet" href="{%static 'information.css'%}">
+<div class="status-bar-bg">
+    <div class="status-bar" style="width: 100vw;"></div>
+</div>
 <button onclick="history.back()" class="back-button"></button>
 <div class="title">
     진짜 다 왔어요!
@@ -10,9 +13,6 @@
 <form method="POST" class="post-form">{% csrf_token %}
     {{basic_information_form}}
     <div id="fixed-next-button" >
-        <div class="status-bar-bg">
-            <div class="status-bar" style="width: 100vw;"></div>
-        </div>
         <button type="submit" class="save btn btn-default" id="next-button">
             <span class="fixed_request_button_content"> 완료 </span>
         </button>

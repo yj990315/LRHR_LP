@@ -218,7 +218,8 @@ a {
 .fixed-button-bg {
     width: 100vw;
     height: 70px;
-    background-color: #4364f7;
+    background: linear-gradient(91.84deg, #4364F7 0.47%, #6B86FF 100%);
+    /* background-color: #4364f7; */
     position: absolute;
     left: 0;
     bottom: 0;
@@ -242,7 +243,7 @@ a {
     letter-spacing: normal;
     color: #ffffff;
     text-decoration: none;
-    background-color: #4364f7;
+    /* background-color: #4364f7; */
 }
 
 .fixed_request_button_content:active{
