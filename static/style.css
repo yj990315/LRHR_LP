@@ -171,7 +171,8 @@ a {
     background-image: url(./img/fapisLo.png);
     width: 100vw;
     height: 100vh;
-    background-size: 417px 651px;
+    /* background-size: 417px 651px; */
+    background-size: 417px 681px;
     position: absolute;
     /* top: 34px; */
     /* left: 50%; */
