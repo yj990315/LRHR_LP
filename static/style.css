@@ -1385,20 +1385,21 @@ a {
     }
     .portfolio-ui {
         position: absolute;
-        width: 250px;
+        /* width: 250px; */
         height: 330px;
         bottom: 0;
         right: 0;
         z-index: 2;
     }
     .estimate-ui{
+        height: 250px;
         position: absolute;
         object-fit: contain;
         width: 300px;
         left: 50%;
         margin-left: -150px;
-        top: 60px;
-        z-index: 2
+        top: 100px;
+        z-index: 2;
     }
     .eclipse-bg1 {
         position: relative;
