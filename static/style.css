@@ -252,11 +252,11 @@ a {
 }
 
 .snap-container {
-    /* scroll-snap-type: y mandatory; */
-    scroll-snap-type: none;
+    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: none; */
     overflow:scroll;
-    /* height:calc(100vh - 105px); */
-    height: 100vh;
+    height:calc(100vh - 105px);
+    /* height: 100vh; */
     min-height: 400px;
     width: 100vw;
     overflow-x: hidden;
@@ -264,8 +264,8 @@ a {
 }  
 
 .snap-container > div {
-    /* height:calc(100vh - 105px); */
-    height: 100vh;
+    height:calc(100vh - 105px);
+    /* height: 100vh; */
     min-height: 400px;
     position: relative;
     scroll-snap-align: start;
