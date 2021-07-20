@@ -3,23 +3,44 @@
 {% load static %}
 <link rel="stylesheet" href="{%static 'purpose.css'%}">
 <link rel="stylesheet" href="{%static 'result.css'%}">
+<link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
 <div class="status-bar-bg">
     <div class="status-bar" style="width: 100vw;"></div>
 </div>
 <button onclick="history.back()" class="back-button"></button>
 <div class="title">
-    완료되었습니다!
+    마지막으로 이것만...!
 </div>
-<div class="result-bg">
+<!-- <div class="result-bg">
     <div class="result-face">
     </div>
+</div> -->
+<div class="animated infinite bounce delay-1s">
+    <a href= "http://pf.kakao.com/_xltxmaK/chat" target="_blank">
+        <img src="/static/img/kakaoFinal.png" class="result-kakao">
+    </a>
 </div>
-<div class="result-content">
+<div class="please-message">
+    위 버튼을 눌러,<br />
+    패피스 카카오톡 채널로<br />
+    <span class="please-blue">아무 메세지나</span> 꼭 보내주세요!
+</div>
+<div class="example">
+    EX) ㅇㅇ/ㅋㅋ/ . /자니..? 
+</div>
+<div class="explain">
+    고객님의 명품을 성공적으로<br/>
+    접수하기 위해 반드시 필요한 단계입니다!<br/>
+    조금만 기다려주시면 아가 패피스 발전해서 돌아올게요
+</div>
+<!-- <div class="result-content">
     본 런칭 시 카카오톡으로 알려드릴게요! 
-</div>
-<div id="fixed-next-button" >
+</div> -->
+<!-- <div id="fixed-next-button" >
     <a href="{%url 'index'%}" class="save btn btn-default" id="next-button" style="padding-top: 20px">
         <span class="fixed_request_button_content"> 진짜 완료! </span>
     </a>
-</div>
+</div> -->
 {% endblock %}
