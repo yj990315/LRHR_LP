@@ -17,13 +17,10 @@ class Estimate(models.Model):
     )
     TYPE = (
         ('a', '가방/핸드백'),
-        ('b', '아우터'),
-        ('c', '상의'),
-        ('d', '하의'),
         ('e', '신발'),
         ('f', '지갑/벨트'),
+        ('b', '의류'),
         ('g', '패션 잡화'),
-        ('h', '기타'),
     )
     type_of_product = models.CharField(
         max_length = 1,
