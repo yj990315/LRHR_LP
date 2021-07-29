@@ -5,7 +5,7 @@ from .forms import EstimateForm, ProductForm, BasicInformationForm
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from config import settings
-
+from django.core.mail import EmailMessage
 import os
 
 def index(request):
@@ -76,13 +76,19 @@ def privacy(request, estimate_id):
     if request.method == "POST":
         estimate.is_done = True
         estimate.save()
-        return redirect('landingpage:result')
+        return redirect('landingpage:result', estimate_id)
     return render(request, 'landingpage/privacy.html', {'estimate_id' : estimate_id})
 
 def privacy_pop(request):
     return render(request, 'landingpage/privacy_pop.html')
 
-def result(request):
+def result(request, estimate_id):
+    estimate = get_object_or_404(Estimate, pk=estimate_id)
+    subject = str(estimate_id) + '번째 견적 : ' + estimate.name + '님의 견적 요청이 도착했습니다!!'
+    message = 'https://fapis.io/admin/landingpage/estimate/'+str(estimate_id)+'/change/?_changelist_filters=o%3D-6'
+    mail = EmailMessage(subject, message, to=['fapis@naver.com'])
+    mail.send()
+    estimate.save()
     return render(request, 'landingpage/result.html')
 
 def add_information_new(request, estimate_id):

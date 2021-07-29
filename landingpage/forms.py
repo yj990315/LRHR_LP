@@ -8,7 +8,7 @@ class EstimateForm(forms.ModelForm):
         self.label_suffix = ""
     class Meta:
         model = Estimate
-        fields = ['purpose_of_estimate','type_of_product']
+        fields = ['type_of_product']
 
 class ProductForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):

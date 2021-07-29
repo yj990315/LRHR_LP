@@ -8,11 +8,12 @@ class Estimate(models.Model):
         ('a', '수선'),
         ('l', '세탁'),
         ('r', '리폼'),
+        ('d', '선택 안함')
     )
     purpose_of_estimate = models.CharField(
         max_length=1,
         choices=PURPOSE,
-        default='a',
+        default='d',
         help_text='패피스에 고객님의 소중한 상품을 맡기시는 목적을 선택해주세요.',
     )
     TYPE = (

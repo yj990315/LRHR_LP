@@ -136,3 +136,12 @@ LOGOUT_REDIRECT_URL = '/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'dbswnsek@gmail.com' # ex) bum752@gmail.com
+EMAIL_HOST_PASSWORD = 'yj990315' # ex) P@ssw0rd
+SERVER_EMAIL = 'dbswnsek@gmail.com' # ex) bum752@gmail.com
+DEFAULT_FROM_MAIL = 'fapis' 
