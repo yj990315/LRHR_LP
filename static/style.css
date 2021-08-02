@@ -117,8 +117,8 @@ a {
 }
 
 .request_button {
-    width: 157px;
-    height: 48px;
+    width: 130px;
+    height: 51px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,7 +157,7 @@ a {
     width: 97px;
     height: 18px;
     flex-grow: 0;
-    font-size: 1.6rem;
+    font-size: 18px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -442,7 +442,8 @@ a {
     align-items: center;
     gap: 10px;
     border-radius: 20px;
-    background-color: #0052d4;
+    /* background-color: #0052d4; */
+    background: linear-gradient(93.98deg, #396AFC 9.07%, #2948FF 94.68%);
     font-size: 14px;
     font-weight: bold;
     font-stretch: normal;
@@ -523,11 +524,11 @@ a {
 
 .process-title{
     position: absolute;
-    top: -21.5px;
+    top: -16px;
     width: 100%;
     height: 28px;
     font-family: GmarketSans;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -540,11 +541,11 @@ a {
 
 .process-title-portfolio{
     position: absolute;
-    top: -22px;
+    top: -16px;
     width: 100%;
     height: 28px;
     font-family: GmarketSans;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -557,28 +558,28 @@ a {
 
 .process-title-estimate{
     position: absolute;
-    top: -22px;
+    top: -16px;
     width: 100%;
     height: 28px;
     font-family: GmarketSans;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #000000;
-    left: 3px;
+    color: #393939;
+    left: 5px;
 }
 
 .process-title-door{
     position: absolute;
-    top: -22px;
+    top: -16px;
     width: 100%;
     height: 28px;
     font-family: GmarketSans;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -593,8 +594,8 @@ a {
     z-index: 2;
     position: relative;
     top: 48px;
-    width: 115px;
-    height: 10px;
+    width: 100px;
+    height: 7px;
     display: flex;
     flex-direction: column ;
     justify-content: center;
@@ -609,8 +610,8 @@ a {
     z-index: 2;
     position: relative;
     top: 48px;
-    width: 110px;
-    height: 10px;
+    width: 98px;
+    height: 7px;
     display: flex;
     flex-direction: column ;
     justify-content: center;
@@ -625,8 +626,8 @@ a {
     z-index: 2;
     position: relative;
     top: 48px;
-    width: 128px;
-    height: 10px;
+    width: 108px;
+    height: 7px;
     display: flex;
     flex-direction: column ;
     justify-content: center;
@@ -1060,7 +1061,7 @@ a {
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #0052d4;
+    color: #005EF2;
 }
 
 .benefits-line {
@@ -1125,10 +1126,11 @@ a {
 }
 
 .techlife {
-    width: 269px;
-    height: 238px;
-    margin-left: calc(50vw - 130px);
-    margin-top: 58px;
+    width: 241px;
+    height: 83px;
+    margin-left: calc(50vw - 120px);
+    margin-top: 130px;
+    margin-bottom: 40px;
     object-fit: contain;
 }
 
