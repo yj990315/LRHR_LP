@@ -3,10 +3,10 @@ from .models import Estimate, OverallImage, DetailImage
 from import_export import resources, fields
 from import_export.admin import ExportActionModelAdmin, ImportExportMixin, ImportMixin
 
-class OverallImageInline(admin.TabularInline):
+class OverallImageInline(ImportExportMixin, admin.TabularInline):
     model = OverallImage
 
-class DetailImageInline(admin.TabularInline):
+class DetailImageInline(ImportExportMixin, admin.TabularInline):
     model = DetailImage
 
 class TypeReport(resources.ModelResource):
