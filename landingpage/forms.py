@@ -15,7 +15,7 @@ class ProductForm(forms.ModelForm):
         model = Estimate
         fields = ['brand', 'price', 'year']
         widgets = {
-            'brand': forms.TextInput(attrs={'placeholder':'디올 레이디백, 발렌시아가 바람막이'}),
+            'brand': forms.TextInput(attrs={'placeholder':'ex) 디올 레이디백, 발렌시아가 바람막이'}),
             'price': forms.NumberInput(attrs={'placeholder':'정가가 아닌 구입 가격을 적어주세요.'}),
         }
         labels = {
