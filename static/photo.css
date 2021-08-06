@@ -1,9 +1,9 @@
 
 .photo-comment {
   width: 294px;
-  margin-top: 107px;
+  margin-top: 136px;
   flex-grow: 0;
-  margin-left: calc(50vw - 147px);
+  margin-left: calc(50vw - 125px);
   font-family: NotoSansKR, sans-serif;
   font-size: 15px;
   font-weight: 500;
@@ -11,7 +11,7 @@
   font-style: normal;
   line-height: 1.5;
   letter-spacing: normal;
-  text-align: left;
+  text-align: center;
   color: #545454;
 }
 .where {
