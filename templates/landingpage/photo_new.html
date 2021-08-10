@@ -7,23 +7,38 @@
   
         //div 내용 비워주기
         $('#preview1').empty();
-  
+
         var files = e.target.files;
         var arr =Array.prototype.slice.call(files);
+        console.log("check 전")
+        console.log(files)
         
         //업로드 가능 파일인지 체크
+        //int pre = 1;
         for(var i=0;i<files.length;i++){
+          console.log(i+"check")
           if(!checkExtension(files[i].name,files[i].size)){
+            //pre = 0;
+            arr = []
             return false;
           }
         }
-        
+
+        if (files.length < 2){
+          alert("앞 뒤 사진을 포함하여 최소 2장 이상 업로드 해주세요!");
+          arr = []
+          return false
+          //pre = 0;
+        }
+        console.log("check 후");
+        //if(pre==1) 
         preview(arr);
+        //else $('#preview').empty();
       });//file change
       
       function checkExtension(fileName,fileSize){
   
-        var regex = new RegExp("(.*?)\.(exe|sh|zip|alz)$");
+        var regex = new RegExp("(.*?)\.(exe|sh|zip|alz|xls|docx|pptx|mp3|mp4)$");
         var maxSize = 20971520;  //20MB
         
         if(fileSize >= maxSize){
@@ -41,6 +56,7 @@
       }
       var imgTarget = $('.preview-image1 .upload-hidden1');
       function preview(arr){
+        console.log("preview")
         arr.forEach(function(f){
           
           //파일명이 길면 파일명...으로 처리
@@ -69,17 +85,7 @@
           }
         });//arr.forEach
       }
-    });
-    function deleteImageAction(index) {
-      console.log("index : "+index);
-      sel_files.splice(index, 1);
-      var img_id ="#img_id_"+index;
-      $(img_id).remove();
-      console.log(sel_files);
-    }
-  </script>
-  <script type="text/javascript">
-    $(document).ready(function (e){
+    
       $(".upload-hidden2").change(function(e){
   
         //div 내용 비워주기
@@ -91,31 +97,21 @@
         //업로드 가능 파일인지 체크
         for(var i=0;i<files.length;i++){
           if(!checkExtension(files[i].name,files[i].size)){
+            arr = []
             return false;
           }
         }
         
+        if (files.length < 2){
+          alert("작업부위와 상세사진을 포함한 최소 2장의 사진을 업로드해주세요")
+          arr = []
+          return false
+        }
+
         preview2(arr);
       });//file change
       
-      function checkExtension(fileName,fileSize){
-  
-        var regex = new RegExp("(.*?)\.(exe|sh|zip|alz)$");
-        var maxSize = 20971520;  //20MB
-        
-        if(fileSize >= maxSize){
-          alert('파일 사이즈 초과');
-          $("input[type='file']").val("");  //파일 초기화
-          return false;
-        }
-        
-        if(regex.test(fileName)){
-          alert('업로드 불가능한 파일이 있습니다.');
-          $("input[type='file']").val("");  //파일 초기화
-          return false;
-        }
-        return true;
-      }
+      
       var imgTarget = $('.preview-image2 .upload-hidden2');
       function preview2(arr){
         arr.forEach(function(f){
@@ -157,28 +153,25 @@
 <div class="title">보여주세요!</div>
 <form method="POST" action="{% url 'landingpage:photo_new' estimate_id%}" enctype="multipart/form-data">    {% csrf_token %}
   <div class="overall-img-title">
-      전체 샷 (최소 2장)
+      전체 샷 (앞 뒤 사진 포함)
   </div>
   <div class="filebox1 bs3-primary preview-image1">
       <label for="overall-img"></label> 
-      <input type="file" name="overall-img" id="overall-img" class="upload-hidden1" minlength="2" maxlength="5" multiple>
+      <input type="file" name="overall-img" id="overall-img" class="upload-hidden1" multiple required>
       <div id="preview1"> </div>
   </div>
   <div class="detail-img-title">
-      원하는 작업 부위 (최소 3장)
+      원하는 작업 부위 (작업 부위와 확대 사진 포함)
   </div>
   <div class="filebox2 bs3-primary preview-image2">
       <label for="detail-img"> </label>
-      <input type="file" name="detail-img" id="detail-img" class="upload-hidden2" minlength="3" maxlength="5" multiple>
+      <input type="file" name="detail-img" id="detail-img" class="upload-hidden2" multiple required>
       <div id="preview2"> </div>
   </div>
   </table>
-  <img src = "/static/img/Vector.png" style="    position: absolute;
-    top: 483px;
-    left: calc(50vw - 135px);">
-  <div class="photo-comment" >
-    사진이 없으면 일단 넘어가세요! <br>
-    견적을 받을 때 추가할 수 있습니다.
+  <div class="photo-comment">
+    * 정확한 단가 측정을 위해 맡기실 상품의 <br>
+    <b>전체 샷</b>과 <b>원하는 작업 부위</b> 사진은 <b>필수</b>입니다.
   </div>
   <div id="spinner">
   <div id="floatingCirclesG">
