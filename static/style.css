@@ -388,7 +388,7 @@ a {
     margin-left: calc(50vw - 132px);
     margin-right: calc(50vw - 132px);
     width: 264px!important;
-    height: 267px !important;
+    height: 252px !important;
 }
 .review-name {
     position: absolute;
@@ -1332,7 +1332,7 @@ a {
         margin-left: -132px;
         margin-right: 318px;
         width: 264px!important;
-        height: 267px !important;
+        height: 252px !important;
     }
     .intro-bg {
         background-image: url(./img/fapisLo.png);
