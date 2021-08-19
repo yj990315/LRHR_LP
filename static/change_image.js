@@ -11,51 +11,51 @@ const gucci_mini_bag = document.querySelector(".gucci-mini-bag")
 const dior_bag = document.querySelector(".dior-bag")
 
 function change_image_gucci_bag(){
-    if (status_1.innerText === "before"){
-        status_1.innerText = "after"
+    if (status_1.innerText === "Before"){
+        status_1.innerText = "After"
         gucci_bag.src = "static/img/gucci_bag_after.png"
-    }else if(status_1.innerText === "after"){
-        status_1.innerText = "before"
+    }else if(status_1.innerText === "After"){
+        status_1.innerText = "Before"
         gucci_bag.src = "static/img/gucci_bag_before.png"
     }
 }
 
 function change_image_balenciaga_shoes(){
-    if (status_2.innerText === "before"){
-        status_2.innerText = "after"
+    if (status_2.innerText === "Before"){
+        status_2.innerText = "After"
         balenciaga_shoes.src = "static/img/balenciaga_shoes_after.png"
-    }else if(status_2.innerText === "after"){
-        status_2.innerText = "before"
+    }else if(status_2.innerText === "After"){
+        status_2.innerText = "Before"
         balenciaga_shoes.src = "static/img/balenciaga_shoes_before.png"
     }
 }
 
 function change_image_gucci_shoes(){
-    if (status_3.innerText === "before"){
-        status_3.innerText = "after"
+    if (status_3.innerText === "Before"){
+        status_3.innerText = "After"
         gucci_shoes.src = "static/img/gucci_shoes_after.png"
-    }else if(status_3.innerText === "after"){
-        status_3.innerText = "before"
+    }else if(status_3.innerText === "After"){
+        status_3.innerText = "Before"
         gucci_shoes.src = "static/img/gucci_shoes_before.png"
     }
 }
 
 function change_image_gucci_mini_bag(){
-    if (status_4.innerText === "before"){
-        status_4.innerText = "after"
+    if (status_4.innerText === "Before"){
+        status_4.innerText = "After"
         gucci_mini_bag.src = "static/img/gucci_mini_bag_after.png"
-    }else if(status_4.innerText === "after"){
-        status_4.innerText = "before"
+    }else if(status_4.innerText === "After"){
+        status_4.innerText = "Before"
         gucci_mini_bag.src = "static/img/gucci_mini_bag_before.png"
     }
 }
 
 function change_image_dior_bag(){
-    if (status_5.innerText === "before"){
-        status_5.innerText = "after"
+    if (status_5.innerText === "Before"){
+        status_5.innerText = "After"
         dior_bag.src = "static/img/dior_bag_after.png"
-    }else if(status_5.innerText === "after"){
-        status_5.innerText = "before"
+    }else if(status_5.innerText === "After"){
+        status_5.innerText = "Before"
         dior_bag.src = "static/img/dior_bag_before.png"
     }
 }
