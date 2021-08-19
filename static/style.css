@@ -393,11 +393,11 @@ a {
 .review-name {
     position: absolute;
     width: 200px;
-    top: 15px;
+    top: 190px;
     left: 50%;
     margin-left: -100px;
     font-family: NotoSansKR, sans-serif;
-    font-size: 1.6rem;
+    font-size: 16px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -410,10 +410,10 @@ a {
 .review-profile {
     width: 200px;
     position: absolute;
-    top: 42px;
+    top: 220px;
     left: 50%;
     margin-left: -100px;
-    font-size: 1.4rem;
+    font-size: 14px;
     font-weight: 300;
     font-stretch: normal;
     font-style: normal;
@@ -433,18 +433,59 @@ a {
     left: 74px;
 }
 
-.review-nickname {
-    width: 140px;
-    height: 28px;
+.gucci-bag{
+    width: 194px;
+    height: 145px;
+    object-fit: contain;
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 97px);
+}
+.balenciaga-shoes{
+    width: 212px;
+    height: 130px;
+    object-fit: contain;
+    position: absolute;
+    top: 36px;
+    left: calc(50% - 106px);
+}
+.gucci-shoes{
+    width: 186px;
+    height: 124px;
+    object-fit: contain;
+    position: absolute;
+    top: 36px;
+    left: calc(50% - 93px);
+}
+.gucci-mini-bag{
+    width: 180px;
+    height: 122px;
+    object-fit: contain;
+    position: absolute;
+    top: 40px;
+    left: calc(50% - 90px);
+}
+.dior-bag{
+    width: 208px;
+    height: 114px;
+    object-fit: contain;
+    position: absolute;
+    top: 40px;
+    left: calc(50% - 104px);
+}
+
+.status_1 {
+    width: 64px;
+    height: 19px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
     /* background-color: #0052d4; */
     background: linear-gradient(93.98deg, #396AFC 9.07%, #2948FF 94.68%);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -452,15 +493,111 @@ a {
     letter-spacing: normal;
     text-align: center;
     position: absolute;
-    top: 160px;
-    left: 62px;
+    top: 10px;
+    left: 10px;
+    color: #ffffff;
+    font-family: NotoSansKR,sans-serif;
+}
+.status_2 {
+    width: 64px;
+    height: 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    /* background-color: #0052d4; */
+    background: linear-gradient(93.98deg, #396AFC 9.07%, #2948FF 94.68%);
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: normal;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #ffffff;
+    font-family: NotoSansKR,sans-serif;
+}
+.status_3 {
+    width: 64px;
+    height: 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    /* background-color: #0052d4; */
+    background: linear-gradient(93.98deg, #396AFC 9.07%, #2948FF 94.68%);
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: normal;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #ffffff;
+    font-family: NotoSansKR,sans-serif;
+}
+.status_4 {
+    width: 64px;
+    height: 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    /* background-color: #0052d4; */
+    background: linear-gradient(93.98deg, #396AFC 9.07%, #2948FF 94.68%);
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: normal;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #ffffff;
+    font-family: NotoSansKR,sans-serif;
+}
+.status_5 {
+    width: 64px;
+    height: 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    /* background-color: #0052d4; */
+    background: linear-gradient(93.98deg, #396AFC 9.07%, #2948FF 94.68%);
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: normal;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
     color: #ffffff;
     font-family: NotoSansKR,sans-serif;
 }
 
 .review-review {
     width: 100%;
-    height: 58px;
+    height: 18px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -475,7 +612,7 @@ a {
     text-align: center;
     color: #797979;
     position: absolute;
-    top: 190px;
+    top: 165px;
     font-family: NotoSansKR,sans-serif;
 }
 
@@ -1049,7 +1186,16 @@ a {
     margin-left: calc(50vw - 130px);
 }
 
+.textgroup{
+    width: 300px;
+    object-fit: contain;
+    left: calc(50% - 150px);
+    position: absolute;
+    top: 200px;
+}
+
 .benefits-title {
+    font-family: GmarketSans;
     width: 100%;
     position: absolute;
     margin-top: 31px;
@@ -1074,6 +1220,7 @@ a {
 }
 
 .benefits-foryou {
+    font-family: GmarketSans;
     width: 100%;
     height: 18px;
     position: absolute;
@@ -1092,8 +1239,9 @@ a {
     width: 48px;
     height: 48px;
     position: absolute;
-    margin-top: 187px;
-    margin-left: calc(50vw - 24px);
+    /* top: 220px; */
+    margin-top: 240px;
+    margin-left: calc(50vw - 100px);
     flex-grow: 0;
     object-fit: contain;
 }
@@ -1102,17 +1250,17 @@ a {
     width: 100%;
     height: 40px;
     flex-grow: 0;
-    /* text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); */
+    /* text-shadow: 0 3px 6px rgb(0 0 0 / 25%); */
     font-size: 16px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.4;
     letter-spacing: normal;
-    text-align: center;
+    text-align: left;
     color: #000000;
     position: absolute;
-    margin-top: 244px;
+    margin-top: 254px;
 }
 
 .benefits-small-line {

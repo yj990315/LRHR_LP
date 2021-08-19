@@ -1,44 +1,79 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
+<!-- <script>
+    $(document).ready(function(){
+   var fileTarget = $('.filebox .upload-hidden');
+
+    fileTarget.on('change', function(){
+        if(window.FileReader){
+            // 파일명 추출
+            var filename = $(this)[0].files[0].name;
+        } 
+
+        else {
+            // Old IE 파일명 추출
+            var filename = $(this).val().split('/').pop().split('\\').pop();
+        };
+
+        $(this).siblings('.upload-name').val(filename);
+    });
+
+    //preview image 
+    var imgTarget = $('.preview-image .upload-hidden');
+
+    imgTarget.on('change', function(){
+        var parent = $(this).parent();
+        parent.children('.upload-display').remove();
+
+        if(window.FileReader){
+            //image 파일만
+            if (!$(this)[0].files[0].type.match(/image\//)) return;
+            
+            var reader = new FileReader();
+            reader.onload = function(e){
+                var src = e.target.result;
+                parent.append('<span class="upload-display"><div class="upload-thumb-wrap"><img src="'+src+'" class="upload-thumb" style="width: 70px; height: 66px; border-radius: 10px;"></div></span>');
+            }
+            reader.readAsDataURL($(this)[0].files[0]);
+        }
+
+        else {
+            $(this)[0].select();
+            $(this)[0].blur();
+            var imgSrc = document.selection.createRange().text;
+            parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img class="upload-thumb"></div></div>');
+
+            var img = $(this).siblings('.upload-display').find('img');
+            img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")";        
+        }
+    });
+});
+
+</script> -->
 <script type="text/javascript">
     $(document).ready(function (e){
       $(".upload-hidden1").change(function(e){
   
         //div 내용 비워주기
         $('#preview1').empty();
-
+  
         var files = e.target.files;
         var arr =Array.prototype.slice.call(files);
-        console.log("check 전")
-        console.log(files)
         
         //업로드 가능 파일인지 체크
-        //int pre = 1;
         for(var i=0;i<files.length;i++){
-          console.log(i+"check")
           if(!checkExtension(files[i].name,files[i].size)){
-            //pre = 0;
-            arr = []
             return false;
           }
         }
-
-        if (files.length < 2){
-          alert("앞 뒤 사진을 포함하여 최소 2장 이상 업로드 해주세요!");
-          arr = []
-          return false
-          //pre = 0;
-        }
-        console.log("check 후");
-        //if(pre==1) 
+        
         preview(arr);
-        //else $('#preview').empty();
       });//file change
       
       function checkExtension(fileName,fileSize){
   
-        var regex = new RegExp("(.*?)\.(exe|sh|zip|alz|xls|docx|pptx|mp3|mp4)$");
+        var regex = new RegExp("(.*?)\.(exe|sh|zip|alz)$");
         var maxSize = 20971520;  //20MB
         
         if(fileSize >= maxSize){
@@ -56,7 +91,6 @@
       }
       var imgTarget = $('.preview-image1 .upload-hidden1');
       function preview(arr){
-        console.log("preview")
         arr.forEach(function(f){
           
           //파일명이 길면 파일명...으로 처리
@@ -85,7 +119,17 @@
           }
         });//arr.forEach
       }
-    
+    });
+    function deleteImageAction(index) {
+      console.log("index : "+index);
+      sel_files.splice(index, 1);
+      var img_id ="#img_id_"+index;
+      $(img_id).remove();
+      console.log(sel_files);
+    }
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function (e){
       $(".upload-hidden2").change(function(e){
   
         //div 내용 비워주기
@@ -97,21 +141,31 @@
         //업로드 가능 파일인지 체크
         for(var i=0;i<files.length;i++){
           if(!checkExtension(files[i].name,files[i].size)){
-            arr = []
             return false;
           }
         }
         
-        if (files.length < 2){
-          alert("작업부위와 상세사진을 포함한 최소 2장의 사진을 업로드해주세요")
-          arr = []
-          return false
-        }
-
         preview2(arr);
       });//file change
       
-      
+      function checkExtension(fileName,fileSize){
+  
+        var regex = new RegExp("(.*?)\.(exe|sh|zip|alz)$");
+        var maxSize = 20971520;  //20MB
+        
+        if(fileSize >= maxSize){
+          alert('파일 사이즈 초과');
+          $("input[type='file']").val("");  //파일 초기화
+          return false;
+        }
+        
+        if(regex.test(fileName)){
+          alert('업로드 불가능한 파일이 있습니다.');
+          $("input[type='file']").val("");  //파일 초기화
+          return false;
+        }
+        return true;
+      }
       var imgTarget = $('.preview-image2 .upload-hidden2');
       function preview2(arr){
         arr.forEach(function(f){
@@ -142,6 +196,15 @@
         });//arr.forEach
       }
     });
+  </script>
+<script>
+  $("#detail-image").on("change", function() {
+    if ($("#detail-image")[0].files.length > 2) {
+        alert("You can select only 2 images");
+    } else {
+        $("#detailImgForm").submit();
+    }
+});
 </script>
 
 <link rel="stylesheet" href="{%static 'photo.css'%}">
@@ -153,19 +216,19 @@
 <div class="title">보여주세요!</div>
 <form method="POST" action="{% url 'landingpage:photo_new' estimate_id%}" enctype="multipart/form-data">    {% csrf_token %}
   <div class="overall-img-title">
-      전체 샷 (앞 뒤 사진 포함)
+      전체 샷 (최소 2장)
   </div>
   <div class="filebox1 bs3-primary preview-image1">
       <label for="overall-img"></label> 
-      <input type="file" name="overall-img" id="overall-img" class="upload-hidden1" multiple required>
+      <input type="file" name="overall-img" id="overall-img" class="upload-hidden1" minlength="2" maxlength="5" required multiple>
       <div id="preview1"> </div>
   </div>
   <div class="detail-img-title">
-      원하는 작업 부위 (작업 부위와 확대 사진 포함)
+      원하는 작업 부위 (최소 3장)
   </div>
   <div class="filebox2 bs3-primary preview-image2">
       <label for="detail-img"> </label>
-      <input type="file" name="detail-img" id="detail-img" class="upload-hidden2" multiple required>
+      <input type="file" name="detail-img" id="detail-img" class="upload-hidden2" minlength="3" maxlength="5" multiple>
       <div id="preview2"> </div>
   </div>
   </table>
@@ -173,26 +236,11 @@
     * 정확한 단가 측정을 위해 맡기실 상품의 <br>
     <b>전체 샷</b>과 <b>원하는 작업 부위</b> 사진은 <b>필수</b>입니다.
   </div>
-  <div id="spinner">
-  <div id="floatingCirclesG">
-    
-    <div class="f_circleG" id="frotateG_01"></div>
-    <div class="f_circleG" id="frotateG_02"></div>
-    <div class="f_circleG" id="frotateG_03"></div>
-    <div class="f_circleG" id="frotateG_04"></div>
-    <div class="f_circleG" id="frotateG_05"></div>
-    <div class="f_circleG" id="frotateG_06"></div>
-    <div class="f_circleG" id="frotateG_07"></div>
-    <div class="f_circleG" id="frotateG_08"></div>
-    
-  </div>
-  </div>
   <div id="fixed-next-button">
-    <button type="submit" class="save btn btn-default" id="next-button" style="padding-top: 0px" onclick="setSpinner()">
+    <button type="submit" class="save btn btn-default" id="next-button" style="padding-top: 0px">
         <span class="fixed_request_button_content"> 다음으로 </span>
     </button>
   </div>
 </form>
-<script src="/static/loading.js"></script>
 {% endblock %}
 

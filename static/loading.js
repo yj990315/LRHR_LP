@@ -5,6 +5,6 @@ const testbutton = document.querySelector(".photo.comment")
 
 
 function setSpinner(){
-    console.log("clicked")
+    // console.log("clicked")
     spinner.style.display = "block"
 }

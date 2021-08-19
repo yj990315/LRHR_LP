@@ -1,5 +1,7 @@
 from django import forms
+
 from .models import Estimate
+
 class EstimateForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -7,6 +9,7 @@ class EstimateForm(forms.ModelForm):
     class Meta:
         model = Estimate
         fields = ['type_of_product']
+
 class ProductForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -23,6 +26,7 @@ class ProductForm(forms.ModelForm):
             'price': '구입 가격',
             'year': '구입 년도',
         }
+
 class BasicInformationForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
