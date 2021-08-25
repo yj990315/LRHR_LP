@@ -84,10 +84,6 @@ def privacy_pop(request):
 
 def result(request, estimate_id):
     estimate = get_object_or_404(Estimate, pk=estimate_id)
-    subject = str(estimate_id) + '번째 견적 : ' + estimate.name + '님의 견적 요청이 도착했습니다!!'
-    message = 'https://fapis.io/admin/landingpage/estimate/'+str(estimate_id)+'/change/?_changelist_filters=o%3D-6'
-    mail = EmailMessage(subject, message, to=['fapis@naver.com'])
-    mail.send()
     estimate.save()
     return render(request, 'landingpage/result.html')
 
